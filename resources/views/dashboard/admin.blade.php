@@ -1,0 +1,358 @@
+@extends('layouts.master')
+
+@section('title')
+    Dashboard
+@endsection
+
+@section('breadcrumb')
+    @parent
+    <li class="active">Dashboard</li>
+@endsection
+
+@section('content')
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3>{{ $tpcb }}</h3>
+
+                    <p>Total TPCB Akreditasi</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-cube"></i>
+                </div>
+                <a href="{{ route('tpcb.index') }}" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3>{{ $pendamping }}</h3>
+
+                    <p>Total Pendamping Akreditasi</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-cubes"></i>
+                </div>
+                <a href="{{ route('pendamping.index') }}" class="small-box-footer">Lihat <i
+                        class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3>{{ $pjmutupkm }}</h3>
+
+                    <p>Total Pj Mutu Puskesmas</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-id-card"></i>
+                </div>
+                <a href="{{ route('pjmutupkm.index') }}" class="small-box-footer">Lihat <i
+                        class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3>{{ $pkm }}</h3>
+
+                    <p>Puskesmas</p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-home"></i>
+                </div>
+                <a href="{{ route('puskesmas.index') }}" class="small-box-footer">Lihat <i
+                        class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+<h1 class='text-center'>Roadmap Binaan Akreditasi</h1>
+    <div class="row">
+              <div class="col-md-6">
+            <div class="card-header text-center bg-warning">
+                <h3>Untuk informasi jadwal pendampingan/pembinaan ke Puskesmas Binaan harap konfirmasi terlebih dahulu ke
+                    Seksi Mutu Pengawasan Fasyankes.<br>
+                    Terimakasih Perhatiannya</h3>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center bg-primary"><b>Cluster 1 TPCB</b></div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover">
+                        <thead class="text-center">
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Puskesmas Binaan</th>
+                        </thead>
+                        <tbody>
+                            <td>1</td>
+                            <td>dr. AA Ahmad Nurdin, M.M</td>
+                            <td>Cikalong</td>
+                        </tbody>
+                        <tbody>
+                            <td>2</td>
+                            <td>Elvin Yuliani, S.Kep, Ners, M.Kep.</td>
+                            <td>Bojongasih</td>
+                        </tbody>
+                        <tbody>
+                            <td>3</td>
+                            <td>Rina Parina, A.MK, S.KM.M.Epid., M.H.Kes</td>
+                            <td>Cibalong</td>
+                        </tbody>
+                        <tbody>
+                            <td>4</td>
+                            <td>N Elih Harlina, AM.Keb, S.KM, M.H.Kes.</td>
+                            <td>Tanjungjaya</td>
+                        </tbody>
+                        <tbody>
+                            <td>5</td>
+                            <td>Wahyu Taufik Pirdaus., S.KM</td>
+                            <td>Rajapolah</td>
+                        </tbody>
+                        <tbody>
+                            <td>6</td>
+                            <td>Maulana Iskandar, A.Md.Kep.</td>
+                            <td>Cisayong</td>
+                        </tbody>
+                        <tbody>
+                            <td>7</td>
+                            <td>Pepep Nahidin, S.Kep, Ners, M.M.</td>
+                            <td>Salawu</td>
+                        </tbody>
+                        <tbody>
+                            <td>8</td>
+                            <td>Wendi Dinapis, S.ST</td>
+                            <td>Sukaratu</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center bg-primary"><b>Cluster 2 TPCB</b></div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover">
+                        <thead class="text-center">
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Puskesmas Binaan</th>
+                        </thead>
+                        <tbody>
+                            <td>1</td>
+                            <td>Iyen Nuryanah, SST, M.Si</td>
+                            <td>Cipatujah</td>
+                        </tbody>
+                        <tbody>
+                            <td>2</td>
+                            <td>Leni Nuraeni HR, S.Kep.</td>
+                            <td>Bantarkalong</td>
+                        </tbody>
+                        <tbody>
+                            <td>3</td>
+                            <td>Otong Kusmana, S.KM, M.P.H.</td>
+                            <td>Cikatomas</td>
+                        </tbody>
+                        <tbody>
+                            <td>4</td>
+                            <td>Priliana Susanty, S.T, M.Si.</td>
+                            <td>Pagerageung</td>
+                        </tbody>
+                        <tbody>
+                            <td>5</td>
+                            <td>Nining Ratningsih., Am.Keb</td>
+                            <td>Sodonghilir</td>
+                        </tbody>
+                        <tbody>
+                            <td>6</td>
+                            <td>Agus Sukmana, AMK, S.KM, M.Si.</td>
+                            <td>Jatiwaras</td>
+                        </tbody>
+                        <tbody>
+                            <td>7</td>
+                            <td>Rahayu Nurhaida M., S.KM, S.Si.T, MM.Kes, M.Si</td>
+                            <td>Sariwangi</td>
+                        </tbody>
+                        <tbody>
+                            <td>8</td>
+                            <td>Asep Abdurahman</td>
+                            <td>Singaparna</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center bg-primary"><b>Cluster 3 TPCB</b></div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover">
+                        <thead class="text-center">
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Puskesmas Binaan</th>
+                        </thead>
+                        <tbody>
+                            <td>1</td>
+                            <td>H. Rd. Mauludin Muchamad, SKM, M.KM</td>
+                            <td>Karangjaya</td>
+                        </tbody>
+                        <tbody>
+                            <td>2</td>
+                            <td>Hj. Iceu Herlina, Am.Keb.,S.KM</td>
+                            <td>Karangnunggal</td>
+                        </tbody>
+                        <tbody>
+                            <td>3</td>
+                            <td>Tiaraima Sisinta, S.KM, M.K.M.</td>
+                            <td>Gunungtanjung</td>
+                        </tbody>
+                        <tbody>
+                            <td>4</td>
+                            <td>Ratih Indriane Septiani, S.Kep,Ners.</td>
+                            <td>Manonjaya</td>
+                        </tbody>
+                        <tbody>
+                            <td>5</td>
+                            <td>dr. Hj Ratih Tedjasukmana</td>
+                            <td>Sukahening</td>
+                        </tbody>
+                        <tbody>
+                            <td>6</td>
+                            <td>Andri Aries Alamsyah, S.Kep.</td>
+                            <td>Leuwisari</td>
+                        </tbody>
+                        <tbody>
+                            <td>7</td>
+                            <td>Yusuf Rifai Romli, S.KM, M.Epid.</td>
+                            <td>Sukaraja</td>
+                        </tbody>
+                        <tbody>
+                            <td>8</td>
+                            <td>Heni Handayani, A.Md, S.KM, M.K.M</td>
+                            <td>Mangunreja</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center bg-primary"><b>Cluster 4 TPCB</b></div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover">
+                        <thead class="text-center">
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Puskesmas Binaan</th>
+                        </thead>
+                        <tbody>
+                            <td>1</td>
+                            <td>dr. Hj. Retty Zia Dewi, MARS</td>
+                            <td>Bojonggambir</td>
+                        </tbody>
+                        <tbody>
+                            <td>2</td>
+                            <td>Elis Supartini, S.IP, M.IP</td>
+                            <td>Culamega</td>
+                        </tbody>
+                        <tbody>
+                            <td>3</td>
+                            <td>Nurul Fadhilah., S.ST</td>
+                            <td>Cineam</td>
+                        </tbody>
+                        <tbody>
+                            <td>4</td>
+                            <td>Yeti Susanti, S.P, M.Si.</td>
+                            <td>Parungponteng</td>
+                        </tbody>
+                        <tbody>
+                            <td>5</td>
+                            <td>Karnadi, S.KM, S.Kep, Ners.</td>
+                            <td>Taraju</td>
+                        </tbody>
+                        <tbody>
+                            <td>6</td>
+                            <td>Anih Purwati, S.Kep, Ners</td>
+                            <td>Cisaruni</td>
+                        </tbody>
+                        <tbody>
+                            <td>7</td>
+                            <td>Dedeh Hartati, AM.Keb, S.KM.</td>
+                            <td>Sukarame</td>
+                        </tbody>
+                        <tbody>
+                            <td>8</td>
+                            <td>Asep Muslihat Permana, S.ST, S.Kep, Ners.</td>
+                            <td>Kadipaten</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center bg-primary"><b>Cluster 5 TPCB</b></div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover">
+                        <thead class="text-center">
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Puskesmas Binaan</th>
+                        </thead>
+                        <tbody>
+                            <td>1</td>
+                            <td>H. Risdiana Kurniawan, SKM, M.Si</td>
+                            <td>Pancatengah</td>
+                        </tbody>
+                        <tbody>
+                            <td>2</td>
+                            <td>Neneng Teni Kristinawati, S.Kep Ners.,M.M</td>
+                            <td>Ciawi</td>
+                        </tbody>
+                        <tbody>
+                            <td>3</td>
+                            <td>Hendah Mariawati, AM.G.</td>
+                            <td>Jamanis</td>
+                        </tbody>
+                        <tbody>
+                            <td>4</td>
+                            <td>Candrawati Puspita Dewi, A.Md.Kes, S.IP.</td>
+                            <td>Salopa</td>
+                        </tbody>
+                        <tbody>
+                            <td>5</td>
+                            <td>Ai Sukmawati, S.KM</td>
+                            <td>Cigalontang</td>
+                        </tbody>
+                        <tbody>
+                            <td>6</td>
+                            <td>Yati Nurhayati, S.KM</td>
+                            <td>Puspahiang</td>
+                        </tbody>
+                        <tbody>
+                            <td>7</td>
+                            <td>H. Epi Edwar Lutpi, S.KM, M.K.M.</td>
+                            <td>Sukaresik</td>
+                        </tbody>
+                        <tbody>
+                            <td>8</td>
+                            <td>Noneng Sariningsih, S.KM., M.K.M</td>
+                            <td>Tinewati</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
