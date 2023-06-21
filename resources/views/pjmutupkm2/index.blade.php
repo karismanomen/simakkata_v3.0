@@ -23,7 +23,6 @@
                                 <th>Nama</th>
                                 <th>NIP</th>
                                 <th>Pangkat</th>
-                                <th>Golongan</th>
                                 <th>Telepon</th>
                                 <th>Email</th>
                             </thead>
@@ -57,7 +56,6 @@
                     {data: 'nama', name: 'nama' , width: '20%', class: 'text-left' },
                     {data: 'nip', name: 'nip' , width: '10%', class: 'text-center' },
                     {data: 'pangkat', name: 'pangkat' , width: '7%', class: 'text-cleft' },
-                    {data: 'golongan', name: 'golongan' , width: '5%', class: 'text-center' },
                     {data: 'telepon', name: 'telepon' , width: '10%', class: 'text-center' },
                     {data: 'email', name: 'email' , width: '15%', class: 'text-left' },
                 ]

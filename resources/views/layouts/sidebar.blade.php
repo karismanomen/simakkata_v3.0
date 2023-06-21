@@ -51,7 +51,7 @@
                         <i class="fa fa-id-card"></i> <span>Pj Mutu Puskesmas</span>
                     </a>
                 </li>
-                <li class="header">DATA PUSKESMAS</li>
+                <li class="header">DATA KLINIK</li>
                 <li>
                     <a href="{{ route('klinik.index') }}">
                         <i class="fa fa-home"></i> <span>Klinik</span>
@@ -96,7 +96,17 @@
                         <i class="fa fa-id-card"></i> <span>Pj Mutu Puskesmas</span>
                     </a>
                 </li>
-
+                <li class="header">DATA KLINIK</li>
+                <li>
+                    <a href="{{ route('klinik.index') }}">
+                        <i class="fa fa-home"></i> <span>Klinik</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('pjmutuklinik.index') }}">
+                        <i class="fa fa-id-card"></i> <span>Pj Mutu Klinik</span>
+                    </a>
+                </li>
             @endif
         </ul>
     </section>

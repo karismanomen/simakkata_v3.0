@@ -82,7 +82,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::group(['middleware' => 'level:2'], function () {
-        Route::get('/klinik2/data', [Klinik2Controller::class, 'data'])->name('klinik2.data');
+        Route::get('/klinik2/data', [Klinik2Controller::class, 'data'])->name('klinik.data');
         Route::resource('/klinik2', Klinik2Controller::class);  
       
         Route::get('/pendamping2/data', [Pendamping2Controller::class, 'data'])->name('pendamping2.data');
