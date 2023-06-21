@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Waktu pembuatan: 18 Jun 2023 pada 20.03
--- Versi server: 10.4.27-MariaDB-cll-lve
--- Versi PHP: 7.3.33
+-- Host: 127.0.0.1
+-- Generation Time: Jun 21, 2023 at 02:42 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -35,7 +35,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `created_at`, `updated_at`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `klinik`
+-- Table structure for table `klinik`
 --
 
 CREATE TABLE `klinik` (
@@ -57,13 +57,13 @@ CREATE TABLE `klinik` (
   `tahun_akre` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `noizin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -73,7 +73,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -87,7 +87,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -99,7 +99,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pendamping`
+-- Table structure for table `pendamping`
 --
 
 CREATE TABLE `pendamping` (
@@ -109,7 +109,6 @@ CREATE TABLE `pendamping` (
   `nip` varchar(255) NOT NULL,
   `jabatan_akre` varchar(255) NOT NULL,
   `pangkat` varchar(255) NOT NULL,
-  `golongan` varchar(255) NOT NULL,
   `telepon` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -117,36 +116,36 @@ CREATE TABLE `pendamping` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `pendamping`
+-- Dumping data for table `pendamping`
 --
 
-INSERT INTO `pendamping` (`id_pendamping`, `id_kategori`, `nama_pendamping`, `nip`, `jabatan_akre`, `pangkat`, `golongan`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
-(4, 1, 'Dedeh Hartati, Am.Keb, SKM', '196512311986032090', 'Pendamping UKM', 'Penata Tk I', 'IIId', '085223303052', 'dedehhartati65@gmail.com', '2023-04-02 11:16:54', '2023-04-02 11:16:54'),
-(5, 1, 'Nurul Fadhilah, S.ST, M.M', '198907182017042001', 'Pendamping Admen', 'Penata Muda Tk I', 'IIIb', '085351244488', 'ratunurul24@gmail.com', '2023-04-02 22:08:55', '2023-04-02 22:08:55'),
-(6, 1, 'drg Andri Bastian, S.IP', '197907022009021004', 'Pendamping UKP', 'Pembina Tk I', 'IVb', '081223565929', 'drg.abassambas@gmail.com', '2023-04-02 22:10:11', '2023-04-02 22:10:11'),
-(7, 1, 'Leni Nuraeni HR, S.Kep', '197607201997032002', 'Pendamping Admen', 'Penata Tk I', 'IIId', '08112470278', 'nleni2473@gmail.com', '2023-04-02 22:11:46', '2023-04-02 22:11:46'),
-(8, 1, 'Mia Shofia, SKM, SST, MKM', '197605302011012002', 'Pendamping UKM', 'Penata Tk I', 'IIId', '08122460660', 'miaherawan@gmail.com', '2023-04-02 22:12:50', '2023-04-02 22:12:50'),
-(9, 1, 'dr Hj Analisa', '197410082002122002', 'Pendamping UKP', 'Pembina Tk I', 'IVb', '081214937891', 'analisaratnasari@gmail.com', '2023-04-02 22:13:46', '2023-04-02 22:13:46'),
-(10, 1, 'Ayi Luqmanul Hakim, S.Kep, Ners', '198301072011011003', 'Pendamping Admen', 'Penata Muda Tk I', 'IIIb', '085323838666', 'ayiluqmanulhakim@gmail.com', '2023-04-02 22:14:51', '2023-04-02 22:14:51'),
-(11, 1, 'Otong Kusmana, SKM, MPH', '197604062000121003', 'Pendamping UKM', 'Pembina', 'IVa', '082121656509', 'otongkusman@gmail.com', '2023-04-02 22:17:05', '2023-04-03 10:37:07'),
-(12, 1, 'Wilianto, Amd.KG, SKM, MAP', '197909152010011009', 'Pendamping Admen', 'Penata', 'IIIc', '082318496062', 'willydinkeskab@gmail.com', '2023-04-02 22:18:38', '2023-04-02 22:18:38'),
-(13, 1, 'Esther Rizal, SKM', '197505222005012010', 'Pendamping Admen', 'Penata Tk I', 'IIId', '085224103639', 'bunda.rara08@gmail.com', '2023-04-02 22:19:34', '2023-04-02 22:19:34'),
-(14, 1, 'dr Yunike Rosdiana Herman, MKM', '197006292002122002', 'Pendamping UKP', 'Pembina Tk I', 'IVb', '085318342550', 'yunikerh@gmail.com', '2023-04-02 22:20:31', '2023-04-02 22:20:31'),
-(15, 1, 'Saefullah Darmawan S., S.ST', '198907182017042001', 'Pendamping Admen', 'Pembina', 'IVa', '081322592570', 'saefullah.darmawan@gmail.com', '2023-04-06 22:50:13', '2023-04-07 02:40:53'),
-(16, 1, 'Riksi Tazali. Skep. Ners', '198303082006041008', 'Pendamping UKM', 'Penata Tk I', 'IIId', '085223042563', 'riksitazali@gmail.com', '2023-04-06 23:59:04', '2023-04-07 02:40:42'),
-(17, 1, 'Asep Kristiandi, A.Md.Kep', '198809112015031002', 'Pendamping Admen', 'Pengatur', 'IIc', '082295270996', 'asepkristiandi13@gmail.com', '2023-06-14 02:33:42', '2023-06-14 02:33:42'),
-(18, 1, 'drg Rieni Andriani', '197601192005012005', 'Pendamping UKP', 'Pembina Tk I', 'IVb', '08112121535', 'rieniandryani@gmail.com', '2023-06-14 02:38:53', '2023-06-14 02:38:53'),
-(19, 1, 'dr Dewi Ligiarti', '198105292010012004', 'Pendamping UKP', 'Pembina Tk I', 'IVb', '085315158666', 'drdewil@yahoo.com', '2023-06-14 02:40:30', '2023-06-14 02:40:30'),
-(20, 1, 'Mamat Suhaery, S.Kep, Ners', '196905291989031006', 'Pendamping UKM', 'Pembina Tk I', 'IVb', '081320754360', 'suhaerymamat@gmail.com', '2023-06-14 02:54:16', '2023-06-14 02:54:16'),
-(21, 1, 'Rd Siti Aminah S.tr. Keb', '196809101988032006', 'Pendamping UKM', 'Pembina Tk I', 'IVb', '081320657307', 'sitiasmutie@gmail.com', '2023-06-14 02:56:11', '2023-06-14 02:56:11'),
-(22, 1, 'drg Srie Teresyawati', '197305262005012007', 'Pendamping UKP', 'Pembina Tk I', 'IVb', '08122733417', 'drg_srie_teresyawati@yahoo.com', '2023-06-14 02:57:52', '2023-06-14 02:57:52'),
-(23, 1, 'drg Widi Meipina', '197805032005012007', 'Pendamping UKP', 'Pembina Tk I', 'IVb', '081321029963', 'widimeipinadrg@gmail.com', '2023-06-14 02:59:14', '2023-06-14 02:59:14'),
-(24, 1, 'Candrawati PD, S.IP', '197506131995032001', 'Pendamping UKM', 'Penata Tk I', 'IIId', '08122177405', 'candrawati251@gmail.com', '2023-06-14 03:00:52', '2023-06-14 03:00:52');
+INSERT INTO `pendamping` (`id_pendamping`, `id_kategori`, `nama_pendamping`, `nip`, `jabatan_akre`, `pangkat`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
+(4, 1, 'Dedeh Hartati, Am.Keb, SKM', '196512311986032090', 'Pendamping UKM', 'Penata Tk I/IIId', '085223303052', 'dedehhartati65@gmail.com', '2023-04-02 11:16:54', '2023-06-21 12:13:03'),
+(5, 1, 'Nurul Fadhilah, S.ST, M.M', '198907182017042001', 'Pendamping Admen', 'Penata Muda Tk I/IIIb', '085351244488', 'ratunurul24@gmail.com', '2023-04-02 22:08:55', '2023-06-21 12:13:57'),
+(6, 1, 'drg Andri Bastian, S.IP', '197907022009021004', 'Pendamping UKP', 'Pembina Tk I/IVb', '081223565929', 'drg.abassambas@gmail.com', '2023-04-02 22:10:11', '2023-06-21 12:14:28'),
+(7, 1, 'Leni Nuraeni HR, S.Kep', '197607201997032002', 'Pendamping Admen', 'Penata Tk I/IIId', '08112470278', 'nleni2473@gmail.com', '2023-04-02 22:11:46', '2023-06-21 12:13:15'),
+(8, 1, 'Mia Shofia, SKM, SST, MKM', '197605302011012002', 'Pendamping UKM', 'Penata Muda Tk I/IIIb', '08122460660', 'miaherawan@gmail.com', '2023-04-02 22:12:50', '2023-06-21 12:11:22'),
+(9, 1, 'dr Hj Analisa', '197410082002122002', 'Pendamping UKP', 'Pembina Tk I/IVb', '081214937891', 'analisaratnasari@gmail.com', '2023-04-02 22:13:46', '2023-06-21 12:14:43'),
+(10, 1, 'Ayi Luqmanul Hakim, S.Kep, Ners', '198301072011011003', 'Pendamping Admen', 'Penata Muda Tk I/IIIb', '085323838666', 'ayiluqmanulhakim@gmail.com', '2023-04-02 22:14:51', '2023-06-21 12:12:33'),
+(11, 1, 'Otong Kusmana, SKM, MPH', '197604062000121003', 'Pendamping UKM', 'Pembina/IVa', '082121656509', 'otongkusman@gmail.com', '2023-04-02 22:17:05', '2023-06-21 12:13:51'),
+(12, 1, 'Wilianto, Amd.KG, SKM, MAP', '197909152010011009', 'Pendamping Admen', 'Penata/IIIc', '082318496062', 'willydinkeskab@gmail.com', '2023-04-02 22:18:38', '2023-06-21 12:13:22'),
+(13, 1, 'Esther Rizal, SKM', '197505222005012010', 'Pendamping Admen', 'Penata Tk I/IIId', '085224103639', 'bunda.rara08@gmail.com', '2023-04-02 22:19:34', '2023-06-21 12:14:13'),
+(14, 1, 'dr Yunike Rosdiana Herman, MKM', '197006292002122002', 'Pendamping UKP', 'Pembina Tk I/IVb', '085318342550', 'yunikerh@gmail.com', '2023-04-02 22:20:31', '2023-06-21 12:14:35'),
+(15, 1, 'Saefullah Darmawan S., S.ST', '198907182017042001', 'Pendamping Admen', 'Pembina/IVa', '081322592570', 'saefullah.darmawan@gmail.com', '2023-04-06 22:50:13', '2023-06-21 12:13:26'),
+(16, 1, 'Riksi Tazali. Skep. Ners', '198303082006041008', 'Pendamping UKM', 'Penata Tk I/IIId', '085223042563', 'riksitazali@gmail.com', '2023-04-06 23:59:04', '2023-06-21 12:13:30'),
+(17, 1, 'Asep Kristiandi, A.Md.Kep', '198809112015031002', 'Pendamping Admen', 'Pengatur/IIc', '082295270996', 'asepkristiandi13@gmail.com', '2023-06-14 02:33:42', '2023-06-21 12:08:59'),
+(18, 1, 'drg Rieni Andriani', '197601192005012005', 'Pendamping UKP', 'Pembina Tk I/IVb', '08112121535', 'rieniandryani@gmail.com', '2023-06-14 02:38:53', '2023-06-21 12:11:35'),
+(19, 1, 'dr Dewi Ligiarti', '198105292010012004', 'Pendamping UKP', 'Pembina Tk I/IVb', '085315158666', 'drdewil@yahoo.com', '2023-06-14 02:40:30', '2023-06-21 12:13:09'),
+(20, 1, 'Mamat Suhaery, S.Kep, Ners', '196905291989031006', 'Pendamping UKM', 'Pembina Tk I/IVb', '081320754360', 'suhaerymamat@gmail.com', '2023-06-14 02:54:16', '2023-06-21 12:14:05'),
+(21, 1, 'Rd Siti Aminah S.tr. Keb', '196809101988032006', 'Pendamping UKM', 'Pembina Tk I/IVb', '081320657307', 'sitiasmutie@gmail.com', '2023-06-14 02:56:11', '2023-06-21 12:13:41'),
+(22, 1, 'drg Srie Teresyawati', '197305262005012007', 'Pendamping UKP', 'Pembina Tk I/IVb', '08122733417', 'drg_srie_teresyawati@yahoo.com', '2023-06-14 02:57:52', '2023-06-21 12:11:52'),
+(23, 1, 'drg Widi Meipina', '197805032005012007', 'Pendamping UKP', 'Pembina Tk I/IVb', '081321029963', 'widimeipinadrg@gmail.com', '2023-06-14 02:59:14', '2023-06-21 12:14:20'),
+(24, 1, 'Candrawati PD, S.IP', '197506131995032001', 'Pendamping UKM', 'Penata Tk I/IIId', '08122177405', 'candrawati251@gmail.com', '2023-06-14 03:00:52', '2023-06-21 12:11:28');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `personal_access_tokens`
+-- Table structure for table `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -164,7 +163,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pjmutuklinik`
+-- Table structure for table `pjmutuklinik`
 --
 
 CREATE TABLE `pjmutuklinik` (
@@ -183,7 +182,7 @@ CREATE TABLE `pjmutuklinik` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pjmutupkm`
+-- Table structure for table `pjmutupkm`
 --
 
 CREATE TABLE `pjmutupkm` (
@@ -192,7 +191,6 @@ CREATE TABLE `pjmutupkm` (
   `nama` varchar(255) NOT NULL,
   `nip` varchar(255) NOT NULL,
   `pangkat` varchar(255) NOT NULL,
-  `golongan` varchar(255) NOT NULL,
   `telepon` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -200,51 +198,51 @@ CREATE TABLE `pjmutupkm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `pjmutupkm`
+-- Dumping data for table `pjmutupkm`
 --
 
-INSERT INTO `pjmutupkm` (`id_pjmutupkm`, `pjmutupkm`, `nama`, `nip`, `pangkat`, `golongan`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
-(1, 'Puskesmas Bojongasih', 'dr Nono Yuhana', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081222867854', 'drnonoyuhana79@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(2, 'Puskesmas Bojonggambir', 'Resta Mutiara Yudha, S.Kep.,Ners', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085323004000', 'nononresta@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(3, 'Puskesmas Ciawi', 'Mamat Suhaery, S.Kep,Ners', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081320754360', 'suhaerymamat@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(4, 'Puskesmas Cibalong', 'dr Jaka hermawan', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081289431641', 'dokterdjaka81@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(5, 'Puskesmas Cigalontang', 'dr Navisatul mutmainah', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081395048419', 'navisatul.visa@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(6, 'Puskesmas Cikalong', 'H.Yanyan Cundayana, S.KM.,S.Kep.,Ners', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085223059688', 'hyanyanc.1974@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(7, 'Puskesmas Cikatomas', 'dr Lisva Fauziatul Haqiqiah', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082183160160', 'drlisvafauziatul@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(8, 'Puskesmas Cineam', 'Yanyan Gusmana, A.Md.Kep.', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081214245175', 'yanyangusmana@yahoo.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(9, 'Puskesmas Cipatujah', 'Hj.Sukmanah Mintarsih,S.Kep,Ners', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085323409640', 'sukmanah.mintarsih@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(10, 'Puskesmas Cisaruni', 'drg Andri Bastian, S.IP', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081223565929', 'drgabasambas@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(11, 'Puskesmas Cisayong', 'Ayi Nuraisah Nasution, SKM', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085794488895', 'ayinuraisah9@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(12, 'Puskesmas Culamega', 'dr Adi Heryadi', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085320000550', 'abdihilap@googlemail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(13, 'Puskesmas Gunungtanjung', 'Dede Susi Damayanti, S.Tr.Kes', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082115295530', 'dedesusi.pkmgunungtanjung@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(14, 'Puskesmas Jamanis', 'Cahya Hasbuna,S.Kep,Ners', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085223001981', 'cahyahasbuna82@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(15, 'Puskesmas Jatiwaras', 'dr mahidin', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081230949696', 'Mahid.cm@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(16, 'Puskesmas Kadipaten', 'Drg yunie Arlini Basri', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085972807595', 'yuniarlini75@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(17, 'Puskesmas Karangjaya', 'Leli Nurhasanah, Am. Keb', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082321496690', 'lelinurhasanah@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(18, 'Puskesmas Karangnunggal', 'Asep Kristiandi, S.Kep, Ns', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082295270996', 'asepkristiandi13@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(19, 'Puskesmas Leuwisari', 'Endang Haryati S.KM', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081546875720', 'eharyatileuwisari@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(20, 'Puskesmas Mangunreja', 'Serli Nur Alindra, AM.Keb, SKM', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', 'O81222222027', 'pkm.mangunreja@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(21, 'Puskesmas Manonjaya', 'Widi Meipina, drg', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081321029963', 'widimeipinadrg@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(22, 'Puskesmas Pancatengah', 'Asep Wahyudin, S.Kep.Ners', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085324662291', 'asepwahyu290174@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(23, 'Puskesmas Parungponteng', 'Wahidah, AMd.Kep', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082316197713', 'djamhurwahidah@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(24, 'Puskesmas Puspahiang', 'Taufik Herawan, AMK', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085223419413', 'taufik.hearawan89@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(25, 'Puskesmas Salawu', 'dr Verra Hermania Tisnawati ', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '08112774750', 'verra.tisnawati@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(26, 'Puskesmas Sariwangi', 'dr Agus Indiyatno', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085351045226', 'a.indiyatno@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(27, 'Puskesmas Singaparna', 'N Eti Mulyqti. aM.Keb', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085223499123', 'etim83263@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(28, 'Puskesmas Sodonghilir', 'Asikin, S.Kep.,Ners.', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082387381416', 'asikinikin367@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(29, 'Puskesmas Sukahening', 'dr Hendri Okarisman', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081266727803', 'hendriokadr@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(30, 'Puskesmas Sukaraja', 'Dewi Irma ilmiyati,S.Tr.Keb,SKM', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082316776776', 'Wieirma@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(31, 'Puskesmas Sukarame', 'dr Tatan Rahmat ', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '08164664444', 'tatanrahmat99@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(32, 'Puskesmas Sukaratu', 'Enok Cahyati,S.TR.KEB', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '085223651831', 'cahyatienok7@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(33, 'Puskesmas Sukaresik', 'dr Neng Heni Yudiyanty', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '081224971924', 'nengheniyudiyanti77@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(34, 'Puskesmas Tanjungjaya', 'drg Anis Haerunissa ', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082295286025', 'anishaerunissa08@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(35, 'Puskesmas Taraju', 'Yanti Marliyanti S,Tr,Keb,.S,KM', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082315157464', 'yantimarliyanti57@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
-(36, 'Puskesmas Tinewati', 'dr Hj. Saidah, M.H. Kes ', 'Belum ada data', 'Dan Lain-lain', 'Dan Lain-lain', '082315838589', 'saidahdr@yahoo.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43');
+INSERT INTO `pjmutupkm` (`id_pjmutupkm`, `pjmutupkm`, `nama`, `nip`, `pangkat`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
+(1, 'Puskesmas Bojongasih', 'dr Nono Yuhana', 'Belum ada data', 'Dan Lain-lain', '081222867854', 'drnonoyuhana79@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(2, 'Puskesmas Bojonggambir', 'Resta Mutiara Yudha, S.Kep.,Ners', 'Belum ada data', 'Dan Lain-lain', '085323004000', 'nononresta@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(3, 'Puskesmas Ciawi', 'Mamat Suhaery, S.Kep,Ners', 'Belum ada data', 'Dan Lain-lain', '081320754360', 'suhaerymamat@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(4, 'Puskesmas Cibalong', 'dr Jaka hermawan', 'Belum ada data', 'Dan Lain-lain', '081289431641', 'dokterdjaka81@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(5, 'Puskesmas Cigalontang', 'dr Navisatul mutmainah', 'Belum ada data', 'Dan Lain-lain', '081395048419', 'navisatul.visa@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(6, 'Puskesmas Cikalong', 'H.Yanyan Cundayana, S.KM.,S.Kep.,Ners', 'Belum ada data', 'Dan Lain-lain', '085223059688', 'hyanyanc.1974@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(7, 'Puskesmas Cikatomas', 'dr Lisva Fauziatul Haqiqiah', 'Belum ada data', 'Dan Lain-lain', '082183160160', 'drlisvafauziatul@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(8, 'Puskesmas Cineam', 'Yanyan Gusmana, A.Md.Kep.', 'Belum ada data', 'Dan Lain-lain', '081214245175', 'yanyangusmana@yahoo.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(9, 'Puskesmas Cipatujah', 'Hj.Sukmanah Mintarsih,S.Kep,Ners', 'Belum ada data', 'Dan Lain-lain', '085323409640', 'sukmanah.mintarsih@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(10, 'Puskesmas Cisaruni', 'drg Andri Bastian, S.IP', 'Belum ada data', 'Dan Lain-lain', '081223565929', 'drgabasambas@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(11, 'Puskesmas Cisayong', 'Ayi Nuraisah Nasution, SKM', 'Belum ada data', 'Dan Lain-lain', '085794488895', 'ayinuraisah9@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(12, 'Puskesmas Culamega', 'dr Adi Heryadi', 'Belum ada data', 'Dan Lain-lain', '085320000550', 'abdihilap@googlemail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(13, 'Puskesmas Gunungtanjung', 'Dede Susi Damayanti, S.Tr.Kes', 'Belum ada data', 'Dan Lain-lain', '082115295530', 'dedesusi.pkmgunungtanjung@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(14, 'Puskesmas Jamanis', 'Cahya Hasbuna,S.Kep,Ners', 'Belum ada data', 'Dan Lain-lain', '085223001981', 'cahyahasbuna82@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(15, 'Puskesmas Jatiwaras', 'dr mahidin', 'Belum ada data', 'Dan Lain-lain', '081230949696', 'Mahid.cm@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(16, 'Puskesmas Kadipaten', 'Drg yunie Arlini Basri', 'Belum ada data', 'Dan Lain-lain', '085972807595', 'yuniarlini75@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(17, 'Puskesmas Karangjaya', 'Leli Nurhasanah, Am. Keb', 'Belum ada data', 'Dan Lain-lain', '082321496690', 'lelinurhasanah@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(18, 'Puskesmas Karangnunggal', 'Asep Kristiandi, S.Kep, Ns', 'Belum ada data', 'Dan Lain-lain', '082295270996', 'asepkristiandi13@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(19, 'Puskesmas Leuwisari', 'Endang Haryati S.KM', 'Belum ada data', 'Dan Lain-lain', '081546875720', 'eharyatileuwisari@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(20, 'Puskesmas Mangunreja', 'Serli Nur Alindra, AM.Keb, SKM', 'Belum ada data', 'Dan Lain-lain', 'O81222222027', 'pkm.mangunreja@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(21, 'Puskesmas Manonjaya', 'Widi Meipina, drg', 'Belum ada data', 'Dan Lain-lain', '081321029963', 'widimeipinadrg@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(22, 'Puskesmas Pancatengah', 'Asep Wahyudin, S.Kep.Ners', 'Belum ada data', 'Dan Lain-lain', '085324662291', 'asepwahyu290174@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(23, 'Puskesmas Parungponteng', 'Wahidah, AMd.Kep', 'Belum ada data', 'Dan Lain-lain', '082316197713', 'djamhurwahidah@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(24, 'Puskesmas Puspahiang', 'Taufik Herawan, AMK', 'Belum ada data', 'Dan Lain-lain', '085223419413', 'taufik.hearawan89@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(25, 'Puskesmas Salawu', 'dr Verra Hermania Tisnawati ', 'Belum ada data', 'Dan Lain-lain', '08112774750', 'verra.tisnawati@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(26, 'Puskesmas Sariwangi', 'dr Agus Indiyatno', 'Belum ada data', 'Dan Lain-lain', '085351045226', 'a.indiyatno@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(27, 'Puskesmas Singaparna', 'N Eti Mulyqti. aM.Keb', 'Belum ada data', 'Dan Lain-lain', '085223499123', 'etim83263@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(28, 'Puskesmas Sodonghilir', 'Asikin, S.Kep.,Ners.', 'Belum ada data', 'Dan Lain-lain', '082387381416', 'asikinikin367@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(29, 'Puskesmas Sukahening', 'dr Hendri Okarisman', 'Belum ada data', 'Dan Lain-lain', '081266727803', 'hendriokadr@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(30, 'Puskesmas Sukaraja', 'Dewi Irma ilmiyati,S.Tr.Keb,SKM', 'Belum ada data', 'Dan Lain-lain', '082316776776', 'Wieirma@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(31, 'Puskesmas Sukarame', 'dr Tatan Rahmat ', 'Belum ada data', 'Dan Lain-lain', '08164664444', 'tatanrahmat99@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(32, 'Puskesmas Sukaratu', 'Enok Cahyati,S.TR.KEB', 'Belum ada data', 'Dan Lain-lain', '085223651831', 'cahyatienok7@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(33, 'Puskesmas Sukaresik', 'dr Neng Heni Yudiyanty', 'Belum ada data', 'Dan Lain-lain', '081224971924', 'nengheniyudiyanti77@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(34, 'Puskesmas Tanjungjaya', 'drg Anis Haerunissa ', 'Belum ada data', 'Dan Lain-lain', '082295286025', 'anishaerunissa08@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(35, 'Puskesmas Taraju', 'Yanti Marliyanti S,Tr,Keb,.S,KM', 'Belum ada data', 'Dan Lain-lain', '082315157464', 'yantimarliyanti57@gmail.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43'),
+(36, 'Puskesmas Tinewati', 'dr Hj. Saidah, M.H. Kes ', 'Belum ada data', 'Dan Lain-lain', '082315838589', 'saidahdr@yahoo.com', '2023-04-02 11:42:43', '2023-04-02 11:42:43');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pkm`
+-- Table structure for table `pkm`
 --
 
 CREATE TABLE `pkm` (
@@ -267,11 +265,11 @@ CREATE TABLE `pkm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `pkm`
+-- Dumping data for table `pkm`
 --
 
 INSERT INTO `pkm` (`id_pkm`, `nama`, `alamat`, `kode_fasyankes`, `nilai_akre`, `tahun_akre`, `noizin`, `kawasan`, `inap`, `poned`, `blud`, `wilayah`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES
-(1, 'Puskesmas Bantarkalong', 'Jl. Raya Pamijahan No 40, Desa/Kelurahan Simpang, Kec. Bantarkalong, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030679', 'Madya', '2018', 'asd', 'Dasar', 'Rawat Inap', 'PONED', 'BLUD', 'Bantarkalong', '12321312', '12312313', '2023-04-02 22:47:43', '2023-06-15 10:49:51'),
+(1, 'Puskesmas Bantarkalong', 'Jl. Raya Pamijahan No 40, Desa/Kelurahan Simpang, Kec. Bantarkalong, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030679', 'Madya', '2018', '123', 'Dasar', 'Rawat Inap', 'PONED', 'BLUD', 'Bantarkalong', '123', '123213123213', '2023-04-02 22:47:43', '2023-06-21 12:23:28'),
 (2, 'Puskesmas Bojongasih', 'Kp Madur, Desa/Kelurahan Bojongasih, Kec. Bojongasih, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030680', 'Utama', '2019', '', '', '', '', '', '', '', '', '2023-04-02 22:51:48', '2023-06-15 04:29:27'),
 (3, 'Puskesmas Bojonggambir', 'Kp. Panglayungan, Desa/Kelurahan Bojonggambir, Kec. Bojonggambir, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030682', 'Madya', '', '', '', '', '', '', '', '', '', '2023-04-02 22:52:57', '2023-06-14 03:43:53'),
 (4, 'Puskesmas Ciawi', 'Jalan Puskesmas Nomor 15 Desa Pakemitan Kecamatan Ciawi, Desa/Kelurahan Pakemitan, Kec. Ciawi, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030708', 'Dasar', '', '', '', '', '', '', '', '', '', '2023-04-02 23:48:58', '2023-06-14 03:44:22'),
@@ -315,7 +313,7 @@ INSERT INTO `pkm` (`id_pkm`, `nama`, `alamat`, `kode_fasyankes`, `nilai_akre`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `sessions`
+-- Table structure for table `sessions`
 --
 
 CREATE TABLE `sessions` (
@@ -328,16 +326,18 @@ CREATE TABLE `sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `sessions`
+-- Dumping data for table `sessions`
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('B8zGZSFUasEXof8h0s35Qd6tXWS8rr9MnXPa01US', 1, '36.74.41.132', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoieGJOUktBZDEzZHZpMVVsS1pBS1oyZGsyVGVzZzJ5ZVdJTDJFTWpGUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHBzOi8vbXV0dXlhbmtlc2thYnRhc2lrLnh5ei9wam11dHVwa20iO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkU0ZVQXYxcUMvTTZpZEhIMDRrWlVpZWd6SEczbEpXaFZOQzZ2VEd1MWgvZHl5c3owT05aTE8iO30=', 1687132826);
+('4yqOCESxdMkPiQqhsXlyNpOTdjvjNlmRmWIUtkou', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVjZIWmNCU29LSzBlYld4VlpENXM0Y0lLaHppd21UZHZjUXpXQkFIcyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wdXNrZXNtYXMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkU0ZVQXYxcUMvTTZpZEhIMDRrWlVpZWd6SEczbEpXaFZOQzZ2VEd1MWgvZHl5c3owT05aTE8iO30=', 1687350620),
+('8EJQEv13Nr8vA428Z2O97Rt1yv9fDILDdW0flSMt', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYkt6VWIyNURNc09ZUUEzTWc4eVQzTlBzVnJ5S3gwYjZEb2pNZnF0dyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wZW5kYW1waW5nIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFNGVUF2MXFDL002aWRISDA0a1pVaWVnekhHM2xKV2hWTkM2dlRHdTFoL2R5eXN6ME9OWkxPIjt9', 1687349340),
+('CrL3ZdAMIVRxb2X6qiBEECiSILQUDnBU2eDga2Lj', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNFdsU2syQjdTUG9ROTVqSDBUVDJtSDhiZ0lvM1RLOEpWa0JyeTBsYiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkU0ZVQXYxcUMvTTZpZEhIMDRrWlVpZWd6SEczbEpXaFZOQzZ2VEd1MWgvZHl5c3owT05aTE8iO30=', 1687347993);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `setting`
+-- Table structure for table `setting`
 --
 
 CREATE TABLE `setting` (
@@ -351,7 +351,7 @@ CREATE TABLE `setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `setting`
+-- Dumping data for table `setting`
 --
 
 INSERT INTO `setting` (`id_setting`, `nama_aplikasi`, `alamat`, `telepon`, `path_logo`, `created_at`, `updated_at`) VALUES
@@ -360,7 +360,7 @@ INSERT INTO `setting` (`id_setting`, `nama_aplikasi`, `alamat`, `telepon`, `path
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tpcb`
+-- Table structure for table `tpcb`
 --
 
 CREATE TABLE `tpcb` (
@@ -371,16 +371,16 @@ CREATE TABLE `tpcb` (
   `jabatan_akre` varchar(255) NOT NULL,
   `cluster` varchar(255) NOT NULL,
   `pangkat` varchar(255) NOT NULL,
-  `golongan` varchar(255) NOT NULL,
-  `wilayah` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `telepon` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -402,7 +402,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `nip`, `email`, `email_verified_at`, `password`, `foto`, `level`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
@@ -428,26 +428,32 @@ INSERT INTO `users` (`id`, `name`, `nip`, `email`, `email_verified_at`, `passwor
 --
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`),
   ADD UNIQUE KEY `kategori_nama_kategori_unique` (`nama_kategori`);
 
 --
--- Indeks untuk tabel `migrations`
+-- Indexes for table `klinik`
+--
+ALTER TABLE `klinik`
+  ADD PRIMARY KEY (`id_klinik`);
+
+--
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indeks untuk tabel `pendamping`
+-- Indexes for table `pendamping`
 --
 ALTER TABLE `pendamping`
   ADD PRIMARY KEY (`id_pendamping`),
@@ -455,7 +461,7 @@ ALTER TABLE `pendamping`
   ADD KEY `produk_id_kategori_foreign` (`id_kategori`);
 
 --
--- Indeks untuk tabel `personal_access_tokens`
+-- Indexes for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -463,20 +469,20 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indeks untuk tabel `pjmutupkm`
+-- Indexes for table `pjmutupkm`
 --
 ALTER TABLE `pjmutupkm`
   ADD PRIMARY KEY (`id_pjmutupkm`),
   ADD UNIQUE KEY `member_kode_member_unique` (`pjmutupkm`);
 
 --
--- Indeks untuk tabel `pkm`
+-- Indexes for table `pkm`
 --
 ALTER TABLE `pkm`
   ADD PRIMARY KEY (`id_pkm`);
 
 --
--- Indeks untuk tabel `sessions`
+-- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
@@ -484,13 +490,13 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- Indeks untuk tabel `setting`
+-- Indexes for table `setting`
 --
 ALTER TABLE `setting`
   ADD PRIMARY KEY (`id_setting`);
 
 --
--- Indeks untuk tabel `tpcb`
+-- Indexes for table `tpcb`
 --
 ALTER TABLE `tpcb`
   ADD PRIMARY KEY (`id_tpcb`),
@@ -498,82 +504,88 @@ ALTER TABLE `tpcb`
   ADD KEY `tpcb_id_kategori_foreign` (`id_kategori`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `kategori`
+-- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_kategori` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `migrations`
+-- AUTO_INCREMENT for table `klinik`
+--
+ALTER TABLE `klinik`
+  MODIFY `id_klinik` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT untuk tabel `pendamping`
+-- AUTO_INCREMENT for table `pendamping`
 --
 ALTER TABLE `pendamping`
   MODIFY `id_pendamping` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT untuk tabel `personal_access_tokens`
+-- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `pjmutupkm`
+-- AUTO_INCREMENT for table `pjmutupkm`
 --
 ALTER TABLE `pjmutupkm`
-  MODIFY `id_pjmutupkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_pjmutupkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT untuk tabel `pkm`
+-- AUTO_INCREMENT for table `pkm`
 --
 ALTER TABLE `pkm`
-  MODIFY `id_pkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_pkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT untuk tabel `setting`
+-- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
   MODIFY `id_setting` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `tpcb`
+-- AUTO_INCREMENT for table `tpcb`
 --
 ALTER TABLE `tpcb`
-  MODIFY `id_tpcb` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_tpcb` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `pendamping`
+-- Constraints for table `pendamping`
 --
 ALTER TABLE `pendamping`
   ADD CONSTRAINT `produk_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);
 
 --
--- Ketidakleluasaan untuk tabel `tpcb`
+-- Constraints for table `tpcb`
 --
 ALTER TABLE `tpcb`
   ADD CONSTRAINT `tpcb_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);
