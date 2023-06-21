@@ -68,7 +68,7 @@
                                 <option value="Pembina Utama Muda/IVc">Pembina Utama Muda/IVc</option>
                                 <option value="Pembina Utama Madya/IVd">Pembina Utama Madya/IVd</option>
                                 <option value="Pembina Utama/IVe">Pembina Utama/IVe</option>
-                                <option value="Dan Lain-lain">Dan Lain-lain</option>
+                                <option value=" - "> - </option>
                             </Select>
                         </div>
                     </div>

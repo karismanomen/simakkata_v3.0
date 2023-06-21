@@ -36,7 +36,6 @@ use Illuminate\Support\Facades\Route;
 
 
 //PDF
-Route::get('/pdf/kriteriaPDF', [PDFController::class, 'kriteriaPDF']);
 Route::get('/pdf/pendampingPDF', [PDFController::class, 'pendampingPDF']);
 Route::get('/pdf/pjmutupkmPDF', [PDFController::class, 'pjmutupkmPDF']);
 Route::get('/pdf/puskesmasPDF', [PDFController::class, 'puskesmasPDF']);

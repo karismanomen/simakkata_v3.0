@@ -72,7 +72,6 @@ class PjMutuKlinikController extends Controller
         $pjmutuklinik->nama = $request->nama;
         $pjmutuklinik->nip = $request->nip;
         $pjmutuklinik->pangkat = $request->pangkat;
-        $pjmutuklinik->golongan = $request->golongan;
         $pjmutuklinik->telepon = $request->telepon;
         $pjmutuklinik->email = $request->email;        
         $pjmutuklinik->save();

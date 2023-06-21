@@ -57,6 +57,11 @@
                         <i class="fa fa-home"></i> <span>Klinik</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('pjmutuklinik.index') }}">
+                        <i class="fa fa-id-card"></i> <span>Pj Mutu Klinik</span>
+                    </a>
+                </li>
                 <li class="header">SYSTEM</li>
                 <li>
                     <a href="{{ route('user.index') }}">
