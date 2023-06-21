@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2023 at 02:42 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Waktu pembuatan: 21 Jun 2023 pada 19.02
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -35,7 +35,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `created_at`, `updated_at`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `klinik`
+-- Struktur dari tabel `klinik`
 --
 
 CREATE TABLE `klinik` (
@@ -63,7 +63,7 @@ CREATE TABLE `klinik` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -73,7 +73,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -87,7 +87,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -99,7 +99,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pendamping`
+-- Struktur dari tabel `pendamping`
 --
 
 CREATE TABLE `pendamping` (
@@ -116,7 +116,7 @@ CREATE TABLE `pendamping` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pendamping`
+-- Dumping data untuk tabel `pendamping`
 --
 
 INSERT INTO `pendamping` (`id_pendamping`, `id_kategori`, `nama_pendamping`, `nip`, `jabatan_akre`, `pangkat`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
@@ -145,7 +145,7 @@ INSERT INTO `pendamping` (`id_pendamping`, `id_kategori`, `nama_pendamping`, `ni
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_access_tokens`
+-- Struktur dari tabel `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -163,7 +163,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pjmutuklinik`
+-- Struktur dari tabel `pjmutuklinik`
 --
 
 CREATE TABLE `pjmutuklinik` (
@@ -172,17 +172,16 @@ CREATE TABLE `pjmutuklinik` (
   `nama` varchar(255) NOT NULL,
   `nip` varchar(255) NOT NULL,
   `pangkat` varchar(255) NOT NULL,
-  `golongan` varchar(255) NOT NULL,
   `telepon` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pjmutupkm`
+-- Struktur dari tabel `pjmutupkm`
 --
 
 CREATE TABLE `pjmutupkm` (
@@ -198,7 +197,7 @@ CREATE TABLE `pjmutupkm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pjmutupkm`
+-- Dumping data untuk tabel `pjmutupkm`
 --
 
 INSERT INTO `pjmutupkm` (`id_pjmutupkm`, `pjmutupkm`, `nama`, `nip`, `pangkat`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
@@ -242,7 +241,7 @@ INSERT INTO `pjmutupkm` (`id_pjmutupkm`, `pjmutupkm`, `nama`, `nip`, `pangkat`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pkm`
+-- Struktur dari tabel `pkm`
 --
 
 CREATE TABLE `pkm` (
@@ -265,7 +264,7 @@ CREATE TABLE `pkm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pkm`
+-- Dumping data untuk tabel `pkm`
 --
 
 INSERT INTO `pkm` (`id_pkm`, `nama`, `alamat`, `kode_fasyankes`, `nilai_akre`, `tahun_akre`, `noizin`, `kawasan`, `inap`, `poned`, `blud`, `wilayah`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES
@@ -313,7 +312,7 @@ INSERT INTO `pkm` (`id_pkm`, `nama`, `alamat`, `kode_fasyankes`, `nilai_akre`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sessions`
+-- Struktur dari tabel `sessions`
 --
 
 CREATE TABLE `sessions` (
@@ -326,18 +325,18 @@ CREATE TABLE `sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `sessions`
+-- Dumping data untuk tabel `sessions`
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('4yqOCESxdMkPiQqhsXlyNpOTdjvjNlmRmWIUtkou', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVjZIWmNCU29LSzBlYld4VlpENXM0Y0lLaHppd21UZHZjUXpXQkFIcyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wdXNrZXNtYXMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkU0ZVQXYxcUMvTTZpZEhIMDRrWlVpZWd6SEczbEpXaFZOQzZ2VEd1MWgvZHl5c3owT05aTE8iO30=', 1687350620),
-('8EJQEv13Nr8vA428Z2O97Rt1yv9fDILDdW0flSMt', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYkt6VWIyNURNc09ZUUEzTWc4eVQzTlBzVnJ5S3gwYjZEb2pNZnF0dyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wZW5kYW1waW5nIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFNGVUF2MXFDL002aWRISDA0a1pVaWVnekhHM2xKV2hWTkM2dlRHdTFoL2R5eXN6ME9OWkxPIjt9', 1687349340),
-('CrL3ZdAMIVRxb2X6qiBEECiSILQUDnBU2eDga2Lj', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNFdsU2syQjdTUG9ROTVqSDBUVDJtSDhiZ0lvM1RLOEpWa0JyeTBsYiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkU0ZVQXYxcUMvTTZpZEhIMDRrWlVpZWd6SEczbEpXaFZOQzZ2VEd1MWgvZHl5c3owT05aTE8iO30=', 1687347993);
+('BTx8WSfptERosUHlqiw03dwjV33VsQIpcTguTWKK', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTFJFYUV3cjB1UEliNVg2OGFwdFhGUEpmSnhETmJRRHYya29OYXo4SyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9rbGluaWsiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkU0ZVQXYxcUMvTTZpZEhIMDRrWlVpZWd6SEczbEpXaFZOQzZ2VEd1MWgvZHl5c3owT05aTE8iO30=', 1687365905),
+('KSWPO5JucqICpEHVTU9WtqeLmYKQJp9z3mIwShBF', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieUJuQXB4WlRycHNqc1Eyek9UcGx4WG9jUTFWRk5WVE5RVXAzVHhqUiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1687362961),
+('RXAOcEmM0VAhD5VSROC9hWEWtGo6MsJ6p9sMD4ku', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiRTczMENzandUNmVjdXBRVlU5YkNxbmdzUW1CZlBZejdES0hzM0RTRSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI2OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvdXNlciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRTRlVBdjFxQy9NNmlkSEgwNGtaVWllZ3pIRzNsSldoVk5DNnZUR3UxaC9keXlzejBPTlpMTyI7fQ==', 1687366946);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting`
+-- Struktur dari tabel `setting`
 --
 
 CREATE TABLE `setting` (
@@ -351,7 +350,7 @@ CREATE TABLE `setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `setting`
+-- Dumping data untuk tabel `setting`
 --
 
 INSERT INTO `setting` (`id_setting`, `nama_aplikasi`, `alamat`, `telepon`, `path_logo`, `created_at`, `updated_at`) VALUES
@@ -360,7 +359,7 @@ INSERT INTO `setting` (`id_setting`, `nama_aplikasi`, `alamat`, `telepon`, `path
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tpcb`
+-- Struktur dari tabel `tpcb`
 --
 
 CREATE TABLE `tpcb` (
@@ -380,7 +379,7 @@ CREATE TABLE `tpcb` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -402,7 +401,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `nip`, `email`, `email_verified_at`, `password`, `foto`, `level`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
@@ -428,32 +427,32 @@ INSERT INTO `users` (`id`, `name`, `nip`, `email`, `email_verified_at`, `passwor
 --
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`),
   ADD UNIQUE KEY `kategori_nama_kategori_unique` (`nama_kategori`);
 
 --
--- Indexes for table `klinik`
+-- Indeks untuk tabel `klinik`
 --
 ALTER TABLE `klinik`
   ADD PRIMARY KEY (`id_klinik`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `pendamping`
+-- Indeks untuk tabel `pendamping`
 --
 ALTER TABLE `pendamping`
   ADD PRIMARY KEY (`id_pendamping`),
@@ -461,7 +460,7 @@ ALTER TABLE `pendamping`
   ADD KEY `produk_id_kategori_foreign` (`id_kategori`);
 
 --
--- Indexes for table `personal_access_tokens`
+-- Indeks untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -469,20 +468,26 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `pjmutupkm`
+-- Indeks untuk tabel `pjmutuklinik`
+--
+ALTER TABLE `pjmutuklinik`
+  ADD PRIMARY KEY (`id_pjmutuklinik`);
+
+--
+-- Indeks untuk tabel `pjmutupkm`
 --
 ALTER TABLE `pjmutupkm`
   ADD PRIMARY KEY (`id_pjmutupkm`),
   ADD UNIQUE KEY `member_kode_member_unique` (`pjmutupkm`);
 
 --
--- Indexes for table `pkm`
+-- Indeks untuk tabel `pkm`
 --
 ALTER TABLE `pkm`
   ADD PRIMARY KEY (`id_pkm`);
 
 --
--- Indexes for table `sessions`
+-- Indeks untuk tabel `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
@@ -490,13 +495,13 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- Indexes for table `setting`
+-- Indeks untuk tabel `setting`
 --
 ALTER TABLE `setting`
   ADD PRIMARY KEY (`id_setting`);
 
 --
--- Indexes for table `tpcb`
+-- Indeks untuk tabel `tpcb`
 --
 ALTER TABLE `tpcb`
   ADD PRIMARY KEY (`id_tpcb`),
@@ -504,88 +509,94 @@ ALTER TABLE `tpcb`
   ADD KEY `tpcb_id_kategori_foreign` (`id_kategori`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `klinik`
+-- AUTO_INCREMENT untuk tabel `klinik`
 --
 ALTER TABLE `klinik`
-  MODIFY `id_klinik` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_klinik` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `pendamping`
+-- AUTO_INCREMENT untuk tabel `pendamping`
 --
 ALTER TABLE `pendamping`
   MODIFY `id_pendamping` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `personal_access_tokens`
+-- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `pjmutupkm`
+-- AUTO_INCREMENT untuk tabel `pjmutuklinik`
+--
+ALTER TABLE `pjmutuklinik`
+  MODIFY `id_pjmutuklinik` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `pjmutupkm`
 --
 ALTER TABLE `pjmutupkm`
   MODIFY `id_pjmutupkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `pkm`
+-- AUTO_INCREMENT untuk tabel `pkm`
 --
 ALTER TABLE `pkm`
   MODIFY `id_pkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `setting`
+-- AUTO_INCREMENT untuk tabel `setting`
 --
 ALTER TABLE `setting`
   MODIFY `id_setting` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tpcb`
+-- AUTO_INCREMENT untuk tabel `tpcb`
 --
 ALTER TABLE `tpcb`
   MODIFY `id_tpcb` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `pendamping`
+-- Ketidakleluasaan untuk tabel `pendamping`
 --
 ALTER TABLE `pendamping`
   ADD CONSTRAINT `produk_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);
 
 --
--- Constraints for table `tpcb`
+-- Ketidakleluasaan untuk tabel `tpcb`
 --
 ALTER TABLE `tpcb`
   ADD CONSTRAINT `tpcb_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);

@@ -107,5 +107,5 @@ class KlinikController extends Controller
 
         return response(null, 204);
     }
-
+    
 }
