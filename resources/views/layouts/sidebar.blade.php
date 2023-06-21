@@ -98,12 +98,12 @@
                 </li>
                 <li class="header">DATA KLINIK</li>
                 <li>
-                    <a href="{{ route('klinik.index') }}">
+                    <a href="{{ route('klinik2.index') }}">
                         <i class="fa fa-home"></i> <span>Klinik</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('pjmutuklinik.index') }}">
+                    <a href="{{ route('pjmutuklinik2.index') }}">
                         <i class="fa fa-id-card"></i> <span>Pj Mutu Klinik</span>
                     </a>
                 </li>

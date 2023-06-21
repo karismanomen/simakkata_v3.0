@@ -12,13 +12,6 @@
 @section('content')
 	<div class="row">
         <div class="col-lg-12">
-            <div class="box">
-                <div class="box-header with-border">
-                    <button onclick="addForm('{{ route('klinik.store') }}')" class="btn btn-success btn-xs btn-flat"><i
-                            class="fa fa-plus-circle"></i> Tambah Klinik</button>
-                </div>
-            </div>
-      <div class="row"> 
             <div class="box-body table-responsive">
                 <table class="table table-striped table-bordered">
                     <thead>
