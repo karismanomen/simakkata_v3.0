@@ -35,8 +35,7 @@
                                 <th>Nama</th>
                                 <th>NIP</th>
                                 <th>Jabatan Akreditasi</th>
-                                <th>Pangkat</th>
-                                <th>Golongan</th>
+                                <th>Pangkat/Golongan</th>
                                 <th>Telepon</th>
                                 <th>Email</th>
                                 <th width="4%"><i class="fa fa-cog"></i></th>
@@ -79,7 +78,6 @@
                     {data: 'nip', name: 'nip' , width: '10%', class: 'text-center' },
                     {data: 'jabatan_akre', name: 'jabatan_akre' , width: '10%', class: 'text-left' },
                     {data: 'pangkat', name: 'pangkat' , width: '10%', class: 'text-left' },
-                    {data: 'golongan', name: 'golongan' , width: '5%', class: 'text-center' },
                     {data: 'telepon', name: 'telepon' , width: '5%', class: 'text-center' },
                     {data: 'email', name: 'email' , width: '15%', class: 'text-left' },
                     {
@@ -136,7 +134,6 @@
                     $('#modal-form [name=nip]').val(response.nip);
                     $('#modal-form [name=jabatan_akre]').val(response.jabatan_akre);
                     $('#modal-form [name=pangkat]').val(response.pangkat);
-                    $('#modal-form [name=golongan]').val(response.golongan);
                     $('#modal-form [name=telepon]').val(response.telepon);
                     $('#modal-form [name=email]').val(response.email);
                 })

@@ -75,49 +75,20 @@
                     <div class="form-group row">
                         <label for="pangkat" class="col-lg-2 col-lg-offset-1 control-label">Pangkat</label>
                         <div class="col-lg-6">
-                            <Select class="form-control" name="pangkat" id="pangkat">
-                                <option value="Juru Muda">Juru Muda</option>
-                                <option value="Juru Muda Tk I">Juru Muda Tk I</option>
-                                <option value="Juru">Juru</option>
-                                <option value="Juru Tk I">Juru Tk I</option>
-                                <option value="Pengatur Muda">Pengatur Muda</option>
-                                <option value="Pengatur Muda Tk I">Pengatur Muda Tk I</option>
-                                <option value="Pengatur">Pengatur</option>
-                                <option value="Pengatur Tk I">Pengatur Tk I</option>
-                                <option value="Penata Muda">Penata Muda</option>
-                                <option value="Penata Muda Tk I">Penata Muda Tk I</option>
-                                <option value="Penata">Penata</option>
-                                <option value="Penata Tk I">Penata Tk I</option>
-                                <option value="Pembina">Pembina</option>
-                                <option value="Pembina Tk I">Pembina Tk I</option>
-                                <option value="Pembina Utama Muda">Pembina Utama Muda</option>
-                                <option value="Pembina Utama Madya">Pembina Utama Madya</option>
-                                <option value="Pembina Utama">Pembina Utama</option>
-                                <option value="Dan Lain-lain">Dan Lain-lain</option>
-                            </Select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="golongan" class="col-lg-2 col-lg-offset-1 control-label">Golongan</label>
-                        <div class="col-lg-6">
-                            <Select class="form-control" name="golongan" id="golongan">
-                                <option value="Ia">Ia</option>
-                                <option value="Ib">Ib</option>
-                                <option value="Ic">Ic</option>
-                                <option value="Id">Id</option>
-                                <option value="IIa">IIa</option>
-                                <option value="IIb">IIb</option>
-                                <option value="IIc">IIc</option>
-                                <option value="IId">IId</option>
-                                <option value="IIIa">IIIa</option>
-                                <option value="IIIb">IIIb</option>
-                                <option value="IIIc">IIIc</option>
-                                <option value="IIId">IIId</option>
-                                <option value="IVa">IVa</option>
-                                <option value="IVb">IVb</option>
-                                <option value="IVc">IVc</option>
-                                <option value="IVd">IVd</option>
-                                <option value="IVd">IVd</option>
+                        <Select class="form-control" name="pangkat" id="pangkat">
+                                <option value="Pengatur Muda IIa">Pengatur Muda/IIa</option>
+                                <option value="Pengatur Muda Tk I/IIb">Pengatur Muda Tk I/IIb</option>
+                                <option value="Pengatur/IIc">Pengatur/IIc</option>
+                                <option value="Pengatur Tk I/IId">Pengatur Tk I/IId</option>
+                                <option value="Penata Muda/IIIa">Penata Muda/IIIa</option>
+                                <option value="Penata Muda Tk I/IIIb">Penata Muda Tk I/IIIb</option>
+                                <option value="Penata/IIIc">Penata/IIIc</option>
+                                <option value="Penata Tk I/IIId">Penata Tk I/IIId</option>
+                                <option value="Pembina/IVa">Pembina/IVa</option>
+                                <option value="Pembina Tk I/IVb">Pembina Tk I/IVb</option>
+                                <option value="Pembina Utama Muda/IVc">Pembina Utama Muda/IVc</option>
+                                <option value="Pembina Utama Madya/IVd">Pembina Utama Madya/IVd</option>
+                                <option value="Pembina Utama/IVe">Pembina Utama/IVe</option>
                                 <option value="Dan Lain-lain">Dan Lain-lain</option>
                             </Select>
                         </div>

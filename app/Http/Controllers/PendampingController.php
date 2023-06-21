@@ -47,9 +47,6 @@ class PendampingController extends Controller
             ->addColumn('pangkat', function ($pendamping) {
                 return ($pendamping->pangkat);
             })
-            ->addColumn('golongan', function ($pendamping) {
-                return ($pendamping->golongan);
-            })
             ->addColumn('telepon', function ($pendamping) {
                 return ($pendamping->telepon);
             })

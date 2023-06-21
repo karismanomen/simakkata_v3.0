@@ -38,23 +38,26 @@ class TpcbController extends Controller
                     <input type="checkbox" name="id_tpcb[]" value="'. $tpcb->id_tpcb .'">
                 ';
             })
+            ->addColumn('nama_tpcb', function ($tpcb) {
+                return ($tpcb->nama_tpcb);
+            })
             ->addColumn('nip', function ($tpcb) {
                 return ($tpcb->nip);
             })
             ->addColumn('jabatan_akre', function ($tpcb) {
                 return ($tpcb->jabatan_akre);
             })
-            ->addColumn('tim', function ($tpcb) {
-                return ($tpcb->tim);
+            ->addColumn('cluster', function ($tpcb) {
+                return ($tpcb->cluster);
             })
             ->addColumn('pangkat', function ($tpcb) {
                 return ($tpcb->pangkat);
             })
-            ->addColumn('golongan', function ($tpcb) {
-                return ($tpcb->golongan);
+            ->addColumn('telepon', function ($tpcb) {
+                return ($tpcb->telepon);
             })
-            ->addColumn('wilayah', function ($tpcb) {
-                return ($tpcb->wilayah);
+            ->addColumn('email', function ($tpcb) {
+                return ($tpcb->email);
             })
             ->addColumn('aksi', function ($tpcb) {
                 return '

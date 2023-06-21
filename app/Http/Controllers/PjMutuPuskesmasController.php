@@ -72,7 +72,6 @@ class PjMutuPuskesmasController extends Controller
         $pjmutupkm->nama = $request->nama;
         $pjmutupkm->nip = $request->nip;
         $pjmutupkm->pangkat = $request->pangkat;
-        $pjmutupkm->golongan = $request->golongan;
         $pjmutupkm->telepon = $request->telepon;
         $pjmutupkm->email = $request->email;        
         $pjmutupkm->save();
