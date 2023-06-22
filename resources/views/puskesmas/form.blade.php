@@ -147,54 +147,6 @@
                         </Select>
                     </div>
                  </div>
-                <div class="modal-body">
-                    <div class="form-group row">
-                        <label for="wilayah" class="col-lg-2 col-lg-offset-1 control-label">Wilayah Kerja</label>
-                        <div class="col-lg-6">
-                        <Select class="form-control" name="wilayah" id="wilayah">
-                                <option value="Bantarkalong">Bantarkalong</option>
-                                <option value="Bojongasih">Bojongasih</option>
-                                <option value="Bojonggambir">Bojonggambir</option>
-                                <option value="Ciawi">Ciawi</option>
-                                <option value="Cibalong">Cibalong</option>
-                                <option value="Cigalontang">Cigalontang</option>
-                                <option value="Cikalong">Cikalong</option>
-                                <option value="Cikatomas">Cikatomas</option>
-                                <option value="Cineam">Cineam</option>
-                                <option value="Cipatujah">Cipatujah</option>
-                                <option value="Cisayong">Cisayong</option>
-                                <option value="Culamega">Culamega</option>
-                                <option value="Gunungtanjung">Gunungtanjung</option>
-                                <option value="Jamanis">Jamanis</option>
-                                <option value="Jatiwaras">Jatiwaras</option>
-                                <option value="Kadipaten">Kadipaten</option>
-                                <option value="Karangjaya">Karangjaya</option>
-                                <option value="Karangnunggal">Karangnunggal</option>
-                                <option value="Leuwisari">Leuwisari</option>
-                                <option value="Mangunreja">Mangunreja</option>
-                                <option value="Manonjaya">Manonjaya</option>
-								<option value="Cisaruni">Padakembang</option>
-                                <option value="Pagerageung">Pagerageung</option>
-                                <option value="Pancatengah">Pancatengah</option>
-                                <option value="Parungponteng">Parungponteng </option>
-                                <option value="Puspahiang">Puspahiang</option>
-                                <option value="Rajapolah">Rajapolah</option>
-                                <option value="Salawu">Salawu</option>
-                                <option value="Salopa">Salopa</option>
-                                <option value="Sariwangi">Sariwangi</option>
-                                <option value="Singaparna">Singaparna</option>
-                                <option value="Sodonghilir">Sodonghilir</option>
-                                <option value="Sukahening">Sukahening</option>
-                                <option value="Sukaraja">Sukaraja</option>
-                                <option value="Sukarame">Sukarame</option>
-                                <option value="Sukaratu">Sukaratu</option>
-                                <option value="Sukaresik">Sukaresik</option>
-                                <option value="Tanjungjaya">Tanjungjaya</option>
-                                <option value="Taraju">Taraju</option>
-                                <option value="Tinewati">Tinewati</option>
-                            </Select>
-                        </div>
-                    </div>
                   <div> 
                     <div class="form-group row">
                         <label for="latitude" class="col-lg-2 col-lg-offset-1 control-label">Latitude</label>
