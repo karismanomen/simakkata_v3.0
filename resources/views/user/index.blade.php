@@ -22,7 +22,8 @@
                         <thead>
                             <th width="1%">No</th>
                             <th>Nama</th>
-                            <th>NIP</th>
+                            <th>NIP/Kode Faskes</th>
+                            <th>Akun</th>
                             <th>Email</th>
                             <th width="4%"><i class="fa fa-cog"></i></th>
                         </thead>
@@ -41,7 +42,7 @@
 
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 50,
+                "iDisplayLength": 15,
                 processing: true,
                 autoWidth: false,
                 ajax: {
@@ -54,6 +55,7 @@
                     },
                     {data: 'name', name: 'name' , width: '15%', class: 'text-left' },
                     {data: 'nip', name: 'nip' , width: '15%', class: 'text-center' },
+                    {data: 'akun', name: 'akun' , width: '15%', class: 'text-center' },
                     {data: 'email', name: 'email' , width: '15%', class: 'text-left' },
                     {
                         data: 'aksi',
@@ -105,6 +107,7 @@
                 .done((response) => {
                     $('#modal-form [name=name]').val(response.name);
                     $('#modal-form [name=nip]').val(response.nip);
+                    $('#modal-form [name=akun]').val(response.akun);
                     $('#modal-form [name=email]').val(response.email);
                 })
                 .fail((errors) => {

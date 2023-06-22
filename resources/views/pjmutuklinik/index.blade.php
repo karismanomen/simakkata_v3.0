@@ -50,7 +50,7 @@
 
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 50,
+                "iDisplayLength": 15,
                 processing: true,
                 autoWidth: false,
                 ajax: {

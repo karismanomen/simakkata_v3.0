@@ -53,6 +53,7 @@ class UserController extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->nip = $request->nip;
+        $user->akun = $request->akun;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->level = 2;
@@ -98,6 +99,7 @@ class UserController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->nip = $request->nip;
+        $user->akun = $request->akun;
         $user->email = $request->email;
         if ($request->has('password') && $request->password != "") 
             $user->password = bcrypt($request->password);

@@ -28,6 +28,7 @@ Kriteria Kawasan Berdasarkan SK
                         <th>Puskesmas</th>
                         <th>Kode Faskes</th>
                         <th>Alamat</th>
+                        <th>Email</th>
                         <th>Hasil Akre</th>
                         <th>Tahun Akre</th>
 						<th>No Izin Puskesmas</th>
@@ -54,7 +55,7 @@ Kriteria Kawasan Berdasarkan SK
 
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 50,
+                "iDisplayLength": 15,
                 processing: true,
                 autoWidth: false,
                 ajax: {
@@ -69,7 +70,8 @@ Kriteria Kawasan Berdasarkan SK
                     },
                     {data: 'nama', name: 'nama' , width: '8%', class: 'text-left' },
                     {data: 'kode_fasyankes', name: 'kode_fasyankes' , width: '3%', class: 'text-center' },
-                    {data: 'alamat', name: 'alamat' , width: '70%', class: 'text-justify' },
+                    {data: 'alamat', name: 'alamat' , width: '60%', class: 'text-justify' },
+                    {data: 'email', name: 'email' , width: '50%', class: 'text-justify' },
                     {data: 'nilai_akre', name: 'nilai_akre' , width: '3%', class: 'text-center' },
                     {data: 'tahun_akre', name: 'tahun_akre' , width: '3%', class: 'text-center' },
                     {data: 'noizin', name: 'noizin' , width: '10%', class: 'text-center' },
@@ -128,6 +130,7 @@ Kriteria Kawasan Berdasarkan SK
                     $('#modal-form [name=nama]').val(response.nama);
                     $('#modal-form [name=kode_fasyankes]').val(response.kode_fasyankes);
                     $('#modal-form [name=alamat]').val(response.alamat);
+                    $('#modal-form [name=email]').val(response.email);
                     $('#modal-form [name=nilai_akre]').val(response.nilai_akre);              
                     $('#modal-form [name=tahun_akre]').val(response.tahun_akre);
                     $('#modal-form [name=noizin]').val(response.noizin);

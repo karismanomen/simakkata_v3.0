@@ -19,11 +19,25 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="nip" class="col-lg-3 col-lg-offset-1 control-label">NIP</label>
+                        <label for="nip" class="col-lg-3 col-lg-offset-1 control-label">NIP/Kode Faskes</label>
                         <div class="col-lg-6">
                             <input type="text" name="nip" id="nip" class="form-control" required>
                             <span class="help-block with-errors"></span>
                         </div>
+                    </div>  
+                    <div>                      
+                    <div class="form-group row">
+                        <label for="akun" class="col-lg-3 col-lg-offset-1 control-label">Akun</label>
+                            <div class="col-lg-6">
+                                <Select class="form-control" name="akun" id="akun">
+                                    <option value="Pendamping">Pendamping</option>
+                                    <option value="Pendamping">TPCB</option>
+                                    <option value="Puskesmas">Puskesmas</option>
+                                    <option value="Klinik">Klinik</option>
+                                    <option value="Labkesda">Labkesda</option>
+                                    <option value="UTD">UTD</option>
+                                </Select>
+                    </div>
                     </div>
                     <div class="form-group row">
                         <label for="email" class="col-lg-3 col-lg-offset-1 control-label">Email</label>
