@@ -42,7 +42,7 @@
 
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 15,
+                "iDisplayLength": 10,
                 processing: true,
                 autoWidth: false,
                 ajax: {

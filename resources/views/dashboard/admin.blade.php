@@ -76,14 +76,7 @@
         </div>
     </div>
 <h1 class='text-center'>Roadmap Binaan Akreditasi</h1>
-    <div class="row">
-              <div class="col-md-6">
-            <div class="card-header text-center bg-warning">
-                <h3>Untuk informasi jadwal pendampingan/pembinaan ke Puskesmas Binaan harap konfirmasi terlebih dahulu ke
-                    Seksi Mutu Pengawasan Fasyankes.<br>
-                    Terimakasih Perhatiannya</h3>
-            </div>
-        </div>
+    <div class="container">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center bg-primary"><b>Cluster 1 TPCB</b></div>
@@ -126,7 +119,7 @@
                         </tbody>
                         <tbody>
                             <td>7</td>
-                            <td>Pepep Nahidin, S.Kep, Ners, M.M.</td>
+                            <td>Teni Kristiani, SIP</td>
                             <td>Salawu</td>
                         </tbody>
                         <tbody>
@@ -175,12 +168,12 @@
                         </tbody>
                         <tbody>
                             <td>6</td>
-                            <td>Agus Sukmana, AMK, S.KM, M.Si.</td>
+                            <td>Wila Susiana Dewi, SKM.</td>
                             <td>Jatiwaras</td>
                         </tbody>
                         <tbody>
                             <td>7</td>
-                            <td>Rahayu Nurhaida M., S.KM, S.Si.T, MM.Kes, M.Si</td>
+                            <td>Rahmaasih S. Abdulghani, S.Kep.Ners</td>
                             <td>Sariwangi</td>
                         </tbody>
                         <tbody>
@@ -229,7 +222,7 @@
                         </tbody>
                         <tbody>
                             <td>6</td>
-                            <td>Andri Aries Alamsyah, S.Kep.</td>
+                            <td>Dede Subekti, S.Pd, M.Kes.</td>
                             <td>Leuwisari</td>
                         </tbody>
                         <tbody>
@@ -258,7 +251,7 @@
                         </thead>
                         <tbody>
                             <td>1</td>
-                            <td>dr. Hj. Retty Zia Dewi, MARS</td>
+                            <td>Epi Edwar Lutfi, SKM, MKM</td>
                             <td>Bojonggambir</td>
                         </tbody>
                         <tbody>
@@ -278,12 +271,12 @@
                         </tbody>
                         <tbody>
                             <td>5</td>
-                            <td>Karnadi, S.KM, S.Kep, Ners.</td>
+                            <td>Asep Yayat NUrhidayat, S.Sos, M.Si.</td>
                             <td>Taraju</td>
                         </tbody>
                         <tbody>
                             <td>6</td>
-                            <td>Anih Purwati, S.Kep, Ners</td>
+                            <td>Mira Miratul Jannah, S.Si, Apt, M.Farm</td>
                             <td>Cisaruni</td>
                         </tbody>
                         <tbody>
@@ -293,7 +286,7 @@
                         </tbody>
                         <tbody>
                             <td>8</td>
-                            <td>Asep Muslihat Permana, S.ST, S.Kep, Ners.</td>
+                            <td>Basuki Kartono, SKM, MKM</td>
                             <td>Kadipaten</td>
                         </tbody>
                     </table>
@@ -312,7 +305,7 @@
                         </thead>
                         <tbody>
                             <td>1</td>
-                            <td>H. Risdiana Kurniawan, SKM, M.Si</td>
+                            <td>Rahayu Nurhaida M. S.SiT, MM.Kes, M.Si</td>
                             <td>Pancatengah</td>
                         </tbody>
                         <tbody>
@@ -342,7 +335,7 @@
                         </tbody>
                         <tbody>
                             <td>7</td>
-                            <td>H. Epi Edwar Lutpi, S.KM, M.K.M.</td>
+                            <td>Idris Maulana, S.Kep.Ners</td>
                             <td>Sukaresik</td>
                         </tbody>
                         <tbody>

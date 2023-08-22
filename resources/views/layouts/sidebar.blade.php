@@ -34,9 +34,20 @@
                         <i class="fa fa-cubes"></i> <span>Pendamping</span>
                     </a>
                 </li>
+                <li class="header">DATA TPCB</li>
               	<li>
                     <a href="{{ route('tpcb.index') }}">
-                        <i class="fa fa-cubes"></i> <span>TPCB</span>
+                        <i class="fa fa-cubes"></i> <span>Tim TPCB</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('tpcbfungsi.index') }}">
+                        <i class="fa fa-cubes"></i> <span>Tugas dan Fungsi TPCB</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('tpcbcluster.index') }}">
+                        <i class="fa fa-cubes"></i> <span>Cluster Binaan</span>
                     </a>
                 </li>
           
@@ -62,6 +73,13 @@
                         <i class="fa fa-id-card"></i> <span>Pj Mutu Klinik</span>
                     </a>
                 </li>
+                <li class="header">DOKUMEN</li>
+                <li>
+                    <a href="{{ route('dokumen.index') }}">
+                        <i class="fa fa-home"></i> <span>Dokumen</span>
+                    </a>
+                </li>
+                <li>          
                 <li class="header">SYSTEM</li>
                 <li>
                     <a href="{{ route('user.index') }}">
@@ -80,11 +98,23 @@
                         <i class="fa fa-cubes"></i> <span>Pendamping</span>
                     </a>
                 </li>
+                <li class="header">DATA TPCB</li>
                 <li>
                     <a href="{{ route('tpcb2.index') }}">
-                        <i class="fa fa-cubes"></i> <span>TPCB</span>
+                        <i class="fa fa-cubes"></i> <span> Tim TPCB</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('tpcb2fungsi.index') }}">
+                        <i class="fa fa-cubes"></i> <span>Tugas dan Fungsi TPCB</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('tpcb2cluster.index') }}">
+                        <i class="fa fa-cubes"></i> <span>Cluster Binaan</span>
+                    </a>
+                </li>
+
                 <li class="header">DATA PUSKESMAS</li>
                 <li>
                     <a href="{{ route('puskesmas2.index') }}">

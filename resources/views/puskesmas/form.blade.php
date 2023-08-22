@@ -147,24 +147,6 @@
                         </Select>
                     </div>
                  </div>
-                  <div> 
-                    <div class="form-group row">
-                        <label for="latitude" class="col-lg-2 col-lg-offset-1 control-label">Latitude</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="latitude" id="latitude" class="form-control">
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>  
-                  </div>
-                  <div> 
-                    <div class="form-group row">
-                        <label for="longitude" class="col-lg-2 col-lg-offset-1 control-label">Longitude</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="longitude" id="longitude" class="form-control">
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>  
-                  </div>
                 <div class="modal-footer">
                     <button class="btn btn-sm btn-flat btn-primary"><i class="fa fa-save"></i> Simpan</button>
                     <button type="button" class="btn btn-sm btn-flat btn-warning" data-dismiss="modal"><i

@@ -1,23 +1,21 @@
 @extends('layouts.master')
 
 @section('title')
-    Daftar Puskesmas
+    Dokumen dan Regulasi Mutu
 @endsection
 
 @section('breadcrumb')
     @parent
-    <li class="active">Daftar Puskesmas</li>
+    <li class="active">Dokumen</li>
 @endsection
 
 @section('content')
-Kriteria Kawasan Berdasarkan SK
-		Keputusan Bupati Tasikmalaya Nomor : 440.7/Kep.317-Diskes/2016 Tentang Penetapan Kategori dan Wilayah Binaan Pusat Kesehatan Masyarakat Berdasarkan Karakteristik Wilayah Kerja Bupati Tasikmalaya.
 	<div class="row">
         <div class="col-lg-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <button onclick="addForm('{{ route('puskesmas.store') }}')" class="btn btn-success btn-xs btn-flat"><i
-                            class="fa fa-plus-circle"></i> Tambah Puskesmas</button>
+                    <button onclick="addForm('{{ route('dokumen.store') }}')" class="btn btn-success btn-xs btn-flat"><i
+                            class="fa fa-plus-circle"></i> Tambah Dokumen</button>
                 </div>
             </div>
       <div class="row"> 
@@ -25,38 +23,30 @@ Kriteria Kawasan Berdasarkan SK
                 <table class="table table-striped table-bordered">
                     <thead>
                         <th>No</th>
-                        <th>Puskesmas</th>
-                        <th>Kode Faskes</th>
-                        <th>Alamat</th>
-                        <th>Email</th>
-                        <th>Hasil Akre</th>
-                        <th>Tahun Akre</th>
-						<th>No Izin Puskesmas</th>
-                        <th>Kriteria Kawasan</th>
-                        <th>Non / Rawat Inap</th>
-                      	<th>Non / Poned</th>
-                        <th>Non / BLUD</th>
-                        <th><i class="fa fa-cog"></i></th>                     
+                      	<th>Kode</th>
+                        <th>Nama Dokumen</th>
+                        <th>Dokumen</th>
+                        <th><i class="fa fa-cog"></i></th>
                     </thead>
                 </table>
             </div>
         </div>
     </div>
    
-    @includeIf('puskesmas.form')
+    @includeIf('dokumen.form')
 @endsection
 
 @push('scripts')
     <script>
         let table;
-
+      
         $(function() {
             table = $('.table').DataTable({
                 "iDisplayLength": 10,
                 processing: true,
                 autoWidth: false,
                 ajax: {
-                    url: '{{ route('puskesmas.data') }}',
+                    url: '{{ route('dokumen.data') }}',
                 },
                 columns: [{
                         data: 'DT_RowIndex',
@@ -65,20 +55,11 @@ Kriteria Kawasan Berdasarkan SK
                         searchable: false,
                         sortable: false
                     },
-                    {data: 'nama', name: 'nama' , width: '8%', class: 'text-left' },
-                    {data: 'kode_fasyankes', name: 'kode_fasyankes' , width: '3%', class: 'text-center' },
-                    {data: 'alamat', name: 'alamat' , width: '50%', class: 'text-justify' },
-                    {data: 'email', name: 'email' , width: '40%', class: 'text-justify' },
-                    {data: 'nilai_akre', name: 'nilai_akre' , width: '5%', class: 'text-center' },
-                    {data: 'tahun_akre', name: 'tahun_akre' , width: '5%', class: 'text-center' },
-                    {data: 'noizin', name: 'noizin' , width: '10%', class: 'text-center' },
-                    {data: 'kawasan', name: 'kawasan' , width: '5%', class: 'text-center' },
-                    {data: 'inap', name: 'inap' , width: '5%', class: 'text-center' },
-                    {data: 'poned', name: 'poned' , width: '5%', class: 'text-center' },
-                    {data: 'blud', name: 'blud' , width: '5%', class: 'text-center' },             
+                    {data: 'id_dokumen', name: 'id_dokumen' , width: '20%', class: 'text-left' },
+                    {data: 'nama_dokumen', name: 'nama_dokumen' , width: '20%', class: 'text-left' },
+                    {data: 'dokumen', name: 'dokumen' , width: '10%', class: 'text-center' },
                     {
                         data: 'aksi',
-                        width: '15%',
                         class: 'text-center',
                         searchable: false,
                         sortable: false
@@ -103,36 +84,28 @@ Kriteria Kawasan Berdasarkan SK
 
         function addForm(url) {
             $('#modal-form').modal('show');
-            $('#modal-form .modal-title').text('Tambah Puskesmas');
+            $('#modal-form .modal-title').text('Tambah Dokumen');
 
             $('#modal-form form')[0].reset();
             $('#modal-form form').attr('action', url);
             $('#modal-form [name=_method]').val('post');
-            $('#modal-form [name=nama]').focus();
+            $('#modal-form [name=nama_dokumen]').focus();
         }
 
         function editForm(url) {
             $('#modal-form').modal('show');
-            $('#modal-form .modal-title').text('Edit Puskesmas');
+            $('#modal-form .modal-title').text('Edit Dokumen');
 
             $('#modal-form form')[0].reset();
             $('#modal-form form').attr('action', url);
             $('#modal-form [name=_method]').val('put');
-            $('#modal-form [name=nama]').focus();
+            $('#modal-form [name=nama_dokumen]').focus();
 
             $.get(url)
                 .done((response) => {
-                    $('#modal-form [name=nama]').val(response.nama);
-                    $('#modal-form [name=kode_fasyankes]').val(response.kode_fasyankes);
-                    $('#modal-form [name=alamat]').val(response.alamat);
-                    $('#modal-form [name=email]').val(response.email);
-                    $('#modal-form [name=nilai_akre]').val(response.nilai_akre);              
-                    $('#modal-form [name=tahun_akre]').val(response.tahun_akre);
-                    $('#modal-form [name=noizin]').val(response.noizin);
-                    $('#modal-form [name=kawasan]').val(response.kawasan);
-                    $('#modal-form [name=inap]').val(response.inap);
-                    $('#modal-form [name=poned]').val(response.poned);              
-                    $('#modal-form [name=blud]').val(response.blud);
+                    $('#modal-form [name=id_dokumen]').val(response.id_dokumen);
+                    $('#modal-form [name=nama_dokumen]').val(response.nama_dokumen);
+                    $('#modal-form [name=dokumen]').val(response.dokumen);
                 })
                 .fail((errors) => {
                     alert('Tidak dapat menampilkan data');

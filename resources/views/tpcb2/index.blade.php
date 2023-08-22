@@ -10,6 +10,7 @@
 @endsection
 
 @section('content')
+Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan Tim Pembina Cluster Binaan Dinas Kesehatan Kabupaten Tasikmalaya.
     <div class="row">
         <div class="col-lg-12">
             <div class="box">
@@ -41,7 +42,7 @@
 
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 15,
+                "iDisplayLength": 10,
                 processing: true,
                 autoWidth: false,
                 ajax: {

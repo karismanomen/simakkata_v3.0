@@ -18,7 +18,8 @@
                         <th>No</th>
                         <th>Klinik</th>
                         <th>Kode Klinik</th>
-                        <th>Alamat</th>
+                        <th>Alamat</th>                        
+                        <th>Dokter PJ</th>
                         <th>Hasil Akre</th>
                         <th>Tahun Akre</th>
 						<th>No Izin Klinik</th>
@@ -35,7 +36,7 @@
       
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 15,
+                "iDisplayLength": 10,
                 processing: true,
                 autoWidth: false,
                 ajax: {
@@ -51,6 +52,7 @@
                     {data: 'nama_klinik', name: 'nama_klinik' , width: '20%', class: 'text-left' },
                     {data: 'kode_klinik', name: 'kode_klinik' , width: '10%', class: 'text-center' },
                     {data: 'alamat', name: 'alamat' , width: '30%', class: 'text-justify' },
+                    {data: 'dokter', name: 'dokter' , width: '15%', class: 'text-center' },
                     {data: 'nilai_akre', name: 'nilai_akre' , width: '8%', class: 'text-center' },
                     {data: 'tahun_akre', name: 'tahun_akre' , width: '8%', class: 'text-center' },
                     {data: 'noizin', name: 'noizin' , width: '15%', class: 'text-center' },

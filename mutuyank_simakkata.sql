@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2023 at 12:45 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Waktu pembuatan: 22 Agu 2023 pada 03.51
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `dokumen`
+--
+
+CREATE TABLE `dokumen` (
+  `id_dokumen` int(10) NOT NULL,
+  `nama_dokumen` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dokumen` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -35,7 +49,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `created_at`, `updated_at`) VALUES
@@ -45,7 +59,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `klinik`
+-- Struktur dari tabel `klinik`
 --
 
 CREATE TABLE `klinik` (
@@ -53,6 +67,7 @@ CREATE TABLE `klinik` (
   `nama_klinik` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `kode_klinik` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `alamat` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dokter` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nilai_akre` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tahun_akre` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `noizin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -60,10 +75,17 @@ CREATE TABLE `klinik` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data untuk tabel `klinik`
+--
+
+INSERT INTO `klinik` (`id_klinik`, `nama_klinik`, `kode_klinik`, `alamat`, `dokter`, `nilai_akre`, `tahun_akre`, `noizin`, `created_at`, `updated_at`) VALUES
+(2, 'a', 'asd', 'asd', 'asd', 'Dasar', 'asd', 'asd', '2023-08-21 03:56:24', '2023-08-21 03:56:24');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -73,7 +95,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -87,7 +109,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -99,7 +121,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pendamping`
+-- Struktur dari tabel `pendamping`
 --
 
 CREATE TABLE `pendamping` (
@@ -116,7 +138,7 @@ CREATE TABLE `pendamping` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pendamping`
+-- Dumping data untuk tabel `pendamping`
 --
 
 INSERT INTO `pendamping` (`id_pendamping`, `id_kategori`, `nama_pendamping`, `nip`, `jabatan_akre`, `pangkat`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
@@ -145,7 +167,7 @@ INSERT INTO `pendamping` (`id_pendamping`, `id_kategori`, `nama_pendamping`, `ni
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_access_tokens`
+-- Struktur dari tabel `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -163,7 +185,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pjmutuklinik`
+-- Struktur dari tabel `pjmutuklinik`
 --
 
 CREATE TABLE `pjmutuklinik` (
@@ -181,7 +203,7 @@ CREATE TABLE `pjmutuklinik` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pjmutupkm`
+-- Struktur dari tabel `pjmutupkm`
 --
 
 CREATE TABLE `pjmutupkm` (
@@ -197,7 +219,7 @@ CREATE TABLE `pjmutupkm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pjmutupkm`
+-- Dumping data untuk tabel `pjmutupkm`
 --
 
 INSERT INTO `pjmutupkm` (`id_pjmutupkm`, `pjmutupkm`, `nama`, `nip`, `pangkat`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
@@ -241,7 +263,7 @@ INSERT INTO `pjmutupkm` (`id_pjmutupkm`, `pjmutupkm`, `nama`, `nip`, `pangkat`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pkm`
+-- Struktur dari tabel `pkm`
 --
 
 CREATE TABLE `pkm` (
@@ -264,55 +286,55 @@ CREATE TABLE `pkm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pkm`
+-- Dumping data untuk tabel `pkm`
 --
 
 INSERT INTO `pkm` (`id_pkm`, `nama`, `alamat`, `kode_fasyankes`, `email`, `nilai_akre`, `tahun_akre`, `noizin`, `kawasan`, `inap`, `poned`, `blud`, `latitude`, `longitude`, `created_at`, `updated_at`) VALUES
-(1, 'Puskesmas Bantarkalong', 'Jl. Raya Pamijahan No 40, Desa/Kelurahan Simpang, Kec. Bantarkalong, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030679', '', 'Madya', '2018', '123', 'Dasar', 'Rawat Inap', 'PONED', 'BLUD', '123', '123213123213', '2023-04-02 22:47:43', '2023-06-21 12:23:28'),
-(2, 'Puskesmas Bojongasih', 'Kp Madur, Desa/Kelurahan Bojongasih, Kec. Bojongasih, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030680', '', 'Utama', '2019', '', '', '', '', '', '', '', '2023-04-02 22:51:48', '2023-06-15 04:29:27'),
-(3, 'Puskesmas Bojonggambir', 'Kp. Panglayungan, Desa/Kelurahan Bojonggambir, Kec. Bojonggambir, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030682', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 22:52:57', '2023-06-14 03:43:53'),
-(4, 'Puskesmas Ciawi', 'Jalan Puskesmas Nomor 15 Desa Pakemitan Kecamatan Ciawi, Desa/Kelurahan Pakemitan, Kec. Ciawi, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030708', '', 'Dasar', '', '', '', '', '', '', '', '', '2023-04-02 23:48:58', '2023-06-14 03:44:22'),
-(5, 'Puskesmas Cibalong', 'Jl Karangnunggal No.204, Desa/Kelurahan Cibalong, Kec. Cibalong, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030677', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:49:31', '2023-06-14 03:44:49'),
-(6, 'Puskesmas Cigalontang', 'Jalan Perkantoran No. 38, Desa/Kelurahan Jayapura, Kec. Cigalontang, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030698', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-02 23:50:59', '2023-06-14 03:45:09'),
-(7, 'Puskesmas Cikalong', 'Kp. Cilutung, Desa/Kelurahan Cikalong, Kec. Cikalong, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030674', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:52:44', '2023-06-14 03:45:21'),
-(8, 'Puskesmas Cikatomas', 'Jl. Rumah Sakit, Desa/Kelurahan Pakemitan, Kec. Cikatomas, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030676', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-02 23:53:30', '2023-06-14 03:45:38'),
-(9, 'Puskesmas Cineam', 'Jl Yogaswara No. 12 Cineam, Desa/Kelurahan Cineam, Kec. Cineam, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030691', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:55:19', '2023-06-14 03:46:02'),
-(10, 'Puskesmas Cipatujah', 'Jl Raya Cipatujah No 123 RT 016 RW 004, Desa/Kelurahan Cipatujah, Kec. Cipatujah, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030672', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:56:11', '2023-06-14 03:46:22'),
-(11, 'Puskesmas Cisaruni', 'Jl Batu beulah, no.90,, Desa/Kelurahan Cisaruni, Kec. Padakembang, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030702', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-02 23:59:00', '2023-06-14 03:46:33'),
-(12, 'Puskesmas Cisayong', 'Jln.Cisayong No.124, Desa/Kelurahan Cisayong, Kec. Cisayong, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030704', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:01:18', '2023-06-14 03:47:06'),
-(13, 'Puskesmas Culamega', 'Jl.Gubernur Sewaka No.02 Culamega, Desa/Kelurahan Cikuya, Kec. Culamega, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030681', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:01:50', '2023-06-14 03:47:20'),
-(14, 'Puskesmas Gunungtanjung', 'Jln Raya Gunungtanjung, Desa/Kelurahan Cinunjang, Kec. Gunung Tanjung, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030693', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 00:03:32', '2023-06-14 03:47:33'),
-(15, 'Puskesmas Jamanis', 'Jln. Raya Jamanis No. 33 , Desa/Kelurahan Sindangraja, Kec. Jamanis, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030707', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 00:04:23', '2023-06-14 03:47:56'),
-(16, 'Puskesmas Jatiwaras', 'Jl Raya Papayan-Cikatomas, Desa/Kelurahan Jatiwaras, Kec. Jatiwaras, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030690', '', 'Paripurna', '', '', '', '', '', '', '', '', '2023-04-03 00:05:52', '2023-06-14 03:48:20'),
-(17, 'Puskesmas Kadipaten', 'Jln. Perjuangan, Desa/Kelurahan Pamoyanan, Kec. Kadipaten, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030709', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:06:39', '2023-06-14 03:51:59'),
-(18, 'Puskesmas Karangjaya', 'Dusun Sukajaya, Desa/Kelurahan Sirnajaya, Kec. Karang Jaya, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030700', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 00:07:15', '2023-06-14 03:52:16'),
-(19, 'Puskesmas Karangnunggal', 'Jl Raya Karangnunggal No. 12, Desa/Kelurahan Karangnunggal, Kec. Karangnunggal, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030673', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:08:06', '2023-06-14 03:52:30'),
-(22, 'Puskesmas Leuwisari', 'Jl. Leuwisari No 25, Desa/Kelurahan Arjasari, Kec. Leuwisari, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030699', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 01:04:05', '2023-06-14 03:52:44'),
-(23, 'Puskesmas Mangunreja', 'Jl. Raya Sukaraja No. 53, Desa/Kelurahan Mangunreja, Kec. Mangunreja, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030697', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:05:45', '2023-06-14 03:53:07'),
-(24, 'Puskesmas Manonjaya', 'Jalan Tangsi No 06 Desa Manonjaya Kecamatan Manonjaya, Desa/Kelurahan Manonjaya, Kec. Manonjaya, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030692', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:06:38', '2023-06-14 03:53:36'),
-(25, 'Puskesmas Pagerageung', 'Jl. Tanjaknangsi No. 23-25 Pagerageung , Desa/Kelurahan Pagerageung, Kec. Pagerageung, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030710', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:11:11', '2023-06-14 03:53:56'),
-(26, 'Puskesmas Pancatengah', 'Jln Raya Pancatengah , Desa/Kelurahan Cibongas, Kec. Pancatengah, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030675', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:13:11', '2023-06-14 03:54:10'),
-(27, 'Puskesmas Parungponteng', 'Kp. Parungponteng 001/001, Desa/Kelurahan Parungponteng, Kec. Parungponteng, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030678', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:13:46', '2023-06-14 03:54:22'),
-(28, 'Puskesmas Puspahiang', 'Jl. Raya Puspahiang No 07, Desa/Kelurahan Puspahiang, Kec. Puspahiang, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030686', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:14:36', '2023-06-14 03:54:39'),
-(29, 'Puskesmas Rajapolah', 'Kp. Cibarani, Desa/Kelurahan Manggungjaya, Kec. Rajapolah, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030706', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:15:08', '2023-06-14 03:56:18'),
-(30, 'Puskesmas Salawu', 'Jl. Raya Salawu No.118, Desa/Kelurahan Margalaksana, Kec. Salawu, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030685', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:16:10', '2023-06-14 03:56:29'),
-(31, 'Puskesmas Salopa', 'Jln Raya Salopa No.226, Desa/Kelurahan Mandalahayu, Kec. Salopa, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030689', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:17:22', '2023-06-14 03:56:52'),
-(32, 'Puskesmas Sariwangi', 'Jln Raya Sariwangi No. 35, Desa/Kelurahan Sariwangi, Kec. Sariwangi, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030701', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:18:54', '2023-06-14 03:57:15'),
-(33, 'Puskesmas Singaparna', 'Jl Pancawarna No 7, Desa/Kelurahan Singasari, Kec. Singaparna, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030695', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:19:42', '2023-06-14 03:57:50'),
-(34, 'Puskesmas Sodonghilir', 'Jln Raya Timur No 18 Sodonghilir, Desa/Kelurahan Sodonghilir, Kec. Sodonghilir, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030683', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:20:30', '2023-06-14 04:06:18'),
-(35, 'Puskesmas Sukahening', 'Jl. Raya Sukahening No. 105, Desa/Kelurahan Calincing, Kec. Sukahening, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030705', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:21:33', '2023-06-14 04:06:30'),
-(36, 'Puskesmas Sukaraja', 'Jln Cibalanarik Sukaraja Kp. Pengkolan , Desa/Kelurahan Sukapura, Kec. Sukaraja, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030688', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:22:16', '2023-06-14 04:06:52'),
-(37, 'Puskesmas Sukarame', 'Jl Raya Sukarame No 117, Desa/Kelurahan Sukarame, Kec. Sukarame, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030696', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:22:49', '2023-06-14 04:07:02'),
-(38, 'Puskesmas Sukaratu', 'Kp Kudang No.58 , Desa/Kelurahan Sukaratu, Kec. Sukaratu, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030703', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:23:24', '2023-06-14 04:07:14'),
-(39, 'Puskesmas Sukaresik', 'Jl. Raya Ciawi-Panumbangan RT 001 RW 002, Desa/Kelurahan Sukaratu, Kec. Sukaresik, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030711', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:24:28', '2023-06-14 04:07:25'),
-(40, 'Puskesmas Tanjungjaya', 'Jl.Cibalanarik Kp.Rengrang 007 , Desa/Kelurahan Cibalanarik, Kec. Tanjungjaya, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030687', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:27:00', '2023-06-14 04:07:44'),
-(41, 'Puskesmas Taraju', 'Jln Raya Taraju No 149, Desa/Kelurahan Taraju, Kec. Taraju, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030684', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:28:25', '2023-06-14 04:07:54'),
-(42, 'Puskesmas Tinewati', 'Jl Garut-Tasikmalaya No 82 Singasari, Desa/Kelurahan Singasari, Kec. Singaparna, Kab. Tasikmalaya, Provinsi Jawa Barat', '1030694', '', 'Paripurna', '', '', '', '', '', '', '', '', '2023-04-03 02:28:54', '2023-06-14 04:08:03');
+(1, 'Puskesmas Bantarkalong', 'Jl. Raya Pamijahan No 40, Desa Simpang, Kec. Bantarkalong', '1030679', '', 'Madya', '2018', '123', 'Dasar', 'Rawat Inap', 'PONED', 'BLUD', '123', '123213123213', '2023-04-02 22:47:43', '2023-06-21 12:23:28'),
+(2, 'Puskesmas Bojongasih', 'Kp Madur, Desa Bojongasih, Kec. Bojongasih', '1030680', '', 'Utama', '2019', '', '', '', '', '', '', '', '2023-04-02 22:51:48', '2023-06-15 04:29:27'),
+(3, 'Puskesmas Bojonggambir', 'Kp. Panglayungan, Desa Bojonggambir, Kec. Bojonggambir', '1030682', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 22:52:57', '2023-06-14 03:43:53'),
+(4, 'Puskesmas Ciawi', 'Jalan Puskesmas Nomor 15 Desa Pakemitan Kecamatan Ciawi, Desa Pakemitan, Kec. Ciawi', '1030708', '', 'Dasar', '', '', '', '', '', '', '', '', '2023-04-02 23:48:58', '2023-06-14 03:44:22'),
+(5, 'Puskesmas Cibalong', 'Jl Karangnunggal No.204, Desa Cibalong, Kec. Cibalong', '1030677', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:49:31', '2023-06-14 03:44:49'),
+(6, 'Puskesmas Cigalontang', 'Jalan Perkantoran No. 38, Desa Jayapura, Kec. Cigalontang', '1030698', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-02 23:50:59', '2023-06-14 03:45:09'),
+(7, 'Puskesmas Cikalong', 'Kp. Cilutung, Desa Cikalong, Kec. Cikalong', '1030674', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:52:44', '2023-06-14 03:45:21'),
+(8, 'Puskesmas Cikatomas', 'Jl. Rumah Sakit, Desa Pakemitan, Kec. Cikatomas', '1030676', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-02 23:53:30', '2023-06-14 03:45:38'),
+(9, 'Puskesmas Cineam', 'Jl Yogaswara No. 12 Cineam, Desa Cineam, Kec. Cineam', '1030691', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:55:19', '2023-06-14 03:46:02'),
+(10, 'Puskesmas Cipatujah', 'Jl Raya Cipatujah No 123 RT 016 RW 004, Desa Cipatujah, Kec. Cipatujah', '1030672', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-02 23:56:11', '2023-06-14 03:46:22'),
+(11, 'Puskesmas Cisaruni', 'Jl Batu beulah, no.90,, Desa Cisaruni, Kec. Padakembang', '1030702', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-02 23:59:00', '2023-06-14 03:46:33'),
+(12, 'Puskesmas Cisayong', 'Jln.Cisayong No.124, Desa Cisayong, Kec. Cisayong', '1030704', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:01:18', '2023-06-14 03:47:06'),
+(13, 'Puskesmas Culamega', 'Jl.Gubernur Sewaka No.02 Culamega, Desa Cikuya, Kec. Culamega', '1030681', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:01:50', '2023-06-14 03:47:20'),
+(14, 'Puskesmas Gunungtanjung', 'Jln Raya Gunungtanjung, Desa Cinunjang, Kec. Gunung Tanjung', '1030693', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 00:03:32', '2023-06-14 03:47:33'),
+(15, 'Puskesmas Jamanis', 'Jln. Raya Jamanis No. 33 , Desa Sindangraja, Kec. Jamanis', '1030707', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 00:04:23', '2023-06-14 03:47:56'),
+(16, 'Puskesmas Jatiwaras', 'Jl Raya Papayan-Cikatomas, Desa Jatiwaras, Kec. Jatiwaras', '1030690', '', 'Paripurna', '', '', '', '', '', '', '', '', '2023-04-03 00:05:52', '2023-06-14 03:48:20'),
+(17, 'Puskesmas Kadipaten', 'Jln. Perjuangan, Desa Pamoyanan, Kec. Kadipaten', '1030709', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:06:39', '2023-06-14 03:51:59'),
+(18, 'Puskesmas Karangjaya', 'Dusun Sukajaya, Desa Sirnajaya, Kec. Karang Jaya', '1030700', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 00:07:15', '2023-06-14 03:52:16'),
+(19, 'Puskesmas Karangnunggal', 'Jl Raya Karangnunggal No. 12, Desa Karangnunggal, Kec. Karangnunggal', '1030673', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 00:08:06', '2023-06-14 03:52:30'),
+(20, 'Puskesmas Leuwisari', 'Jl. Leuwisari No 25, Desa Arjasari, Kec. Leuwisari', '1030699', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 01:04:05', '2023-06-14 03:52:44'),
+(21, 'Puskesmas Mangunreja', 'Jl. Raya Sukaraja No. 53, Desa Mangunreja, Kec. Mangunreja', '1030697', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:05:45', '2023-06-14 03:53:07'),
+(22, 'Puskesmas Manonjaya', 'Jalan Tangsi No 06 Desa Manonjaya Kecamatan Manonjaya, Desa Manonjaya, Kec. Manonjaya', '1030692', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:06:38', '2023-06-14 03:53:36'),
+(23, 'Puskesmas Pagerageung', 'Jl. Tanjaknangsi No. 23-25 Pagerageung , Desa Pagerageung, Kec. Pagerageung', '1030710', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:11:11', '2023-06-14 03:53:56'),
+(24, 'Puskesmas Pancatengah', 'Jln Raya Pancatengah , Desa Cibongas, Kec. Pancatengah', '1030675', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 01:13:11', '2023-06-14 03:54:10'),
+(25, 'Puskesmas Parungponteng', 'Kp. Parungponteng 001/001, Desa Parungponteng, Kec. Parungponteng', '1030678', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:13:46', '2023-06-14 03:54:22'),
+(26, 'Puskesmas Puspahiang', 'Jl. Raya Puspahiang No 07, Desa Puspahiang, Kec. Puspahiang', '1030686', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:14:36', '2023-06-14 03:54:39'),
+(27, 'Puskesmas Rajapolah', 'Kp. Cibarani, Desa Manggungjaya, Kec. Rajapolah', '1030706', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:15:08', '2023-06-14 03:56:18'),
+(28, 'Puskesmas Salawu', 'Jl. Raya Salawu No.118, Desa Margalaksana, Kec. Salawu', '1030685', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:16:10', '2023-06-14 03:56:29'),
+(29, 'Puskesmas Salopa', 'Jln Raya Salopa No.226, Desa Mandalahayu, Kec. Salopa', '1030689', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:17:22', '2023-06-14 03:56:52'),
+(30, 'Puskesmas Sariwangi', 'Jln Raya Sariwangi No. 35, Desa Sariwangi, Kec. Sariwangi', '1030701', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:18:54', '2023-06-14 03:57:15'),
+(31, 'Puskesmas Singaparna', 'Jl Pancawarna No 7, Desa Singasari, Kec. Singaparna', '1030695', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:19:42', '2023-06-14 03:57:50'),
+(32, 'Puskesmas Sodonghilir', 'Jln Raya Timur No 18 Sodonghilir, Desa Sodonghilir, Kec. Sodonghilir', '1030683', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:20:30', '2023-06-14 04:06:18'),
+(33, 'Puskesmas Sukahening', 'Jl. Raya Sukahening No. 105, Desa Calincing, Kec. Sukahening', '1030705', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:21:33', '2023-06-14 04:06:30'),
+(34, 'Puskesmas Sukaraja', 'Jln Cibalanarik Sukaraja Kp. Pengkolan , Desa Sukapura, Kec. Sukaraja', '1030688', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:22:16', '2023-06-14 04:06:52'),
+(35, 'Puskesmas Sukarame', 'Jl Raya Sukarame No 117, Desa Sukarame, Kec. Sukarame', '1030696', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:22:49', '2023-06-14 04:07:02'),
+(36, 'Puskesmas Sukaratu', 'Kp Kudang No.58 , Desa Sukaratu, Kec. Sukaratu', '1030703', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:23:24', '2023-06-14 04:07:14'),
+(37, 'Puskesmas Sukaresik', 'Jl. Raya Ciawi-Panumbangan RT 001 RW 002, Desa Sukaratu, Kec. Sukaresik', '1030711', '', 'Utama', '', '', '', '', '', '', '', '', '2023-04-03 02:24:28', '2023-06-14 04:07:25'),
+(38, 'Puskesmas Tanjungjaya', 'Jl.Cibalanarik Kp.Rengrang 007 , Desa Cibalanarik, Kec. Tanjungjaya', '1030687', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:27:00', '2023-06-14 04:07:44'),
+(39, 'Puskesmas Taraju', 'Jln Raya Taraju No 149, Desa Taraju, Kec. Taraju', '1030684', '', 'Madya', '', '', '', '', '', '', '', '', '2023-04-03 02:28:25', '2023-06-14 04:07:54'),
+(40, 'Puskesmas Tinewati', 'Jl Garut-Tasikmalaya No 82 Singasari, Desa Singasari, Kec. Singaparna', '1030694', '', 'Paripurna', '', '', '', '', '', '', '', '', '2023-04-03 02:28:54', '2023-06-14 04:08:03');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sessions`
+-- Struktur dari tabel `sessions`
 --
 
 CREATE TABLE `sessions` (
@@ -325,18 +347,17 @@ CREATE TABLE `sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `sessions`
+-- Dumping data untuk tabel `sessions`
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('HKHngG5vwdZG16LEWxS9ovjkvs7Fted4yPLZJ02U', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQVpRczNERjcyUlo3bVVndVFYTWJyUHoySkxIeDZ0dk5xTW1DTVNJayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1687430175),
-('V2QkNPPIfWaG3xd2TAj9s2eBWv82kdysB4CF5UTR', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiNjR4dmhJMFJvUVl0b0RuTWV4Q1N3TzdBTTRnWXVGNTd4blUzUURzUCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozMToiaHR0cDovLzEyNy4wLjAuMTo4MDAwL3B1c2tlc21hcyI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMxOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvcHVza2VzbWFzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1687430175),
-('xANclMgFleYJHnhZ1QsD9xD1oadQ34Ug77xJ7ntK', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiR2RKcGl4NmxEWEI5TzdLeUd6MUV3UmVkWlBCYWozZFY0UUY4ZTkxWSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMxOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvcHVza2VzbWFzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFNGVUF2MXFDL002aWRISDA0a1pVaWVnekhHM2xKV2hWTkM2dlRHdTFoL2R5eXN6ME9OWkxPIjt9', 1687430650);
+('eou6i11x0WqWGY0wskN8YZBmHOcnGP4d6LwaatUN', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiWERCbWhxVHJSNGZVejhUa1RHM2JadTJRWUs0Q3hlMjFMOVZUb2d3aSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI4OiJodHRwOi8vbG9jYWxob3N0OjgwMDAva2xpbmlrIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFNGVUF2MXFDL002aWRISDA0a1pVaWVnekhHM2xKV2hWTkM2dlRHdTFoL2R5eXN6ME9OWkxPIjt9', 1692590185),
+('uBjG0uzAwMIsmVtdOVSB3Za1T1Kvvt4T3sHtWzlH', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiR1RyQUlZcE56dHRHcE1FSkVkWVVwQlZLa1VjTlFscTFhZUM0d0JvUiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMxOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFNGVUF2MXFDL002aWRISDA0a1pVaWVnekhHM2xKV2hWTkM2dlRHdTFoL2R5eXN6ME9OWkxPIjt9', 1692599197);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting`
+-- Struktur dari tabel `setting`
 --
 
 CREATE TABLE `setting` (
@@ -350,7 +371,7 @@ CREATE TABLE `setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `setting`
+-- Dumping data untuk tabel `setting`
 --
 
 INSERT INTO `setting` (`id_setting`, `nama_aplikasi`, `alamat`, `telepon`, `path_logo`, `created_at`, `updated_at`) VALUES
@@ -359,7 +380,7 @@ INSERT INTO `setting` (`id_setting`, `nama_aplikasi`, `alamat`, `telepon`, `path
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tpcb`
+-- Struktur dari tabel `tpcb`
 --
 
 CREATE TABLE `tpcb` (
@@ -376,10 +397,56 @@ CREATE TABLE `tpcb` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `tpcb`
+--
+
+INSERT INTO `tpcb` (`id_tpcb`, `id_kategori`, `nama_tpcb`, `nip`, `jabatan_akre`, `cluster`, `pangkat`, `telepon`, `email`, `created_at`, `updated_at`) VALUES
+(10, 2, 'dr. AA Ahmad Nurdin, M.M', '19710222 200212 1 003', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Pembina Tk I/IVb', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:03', '2023-08-16 04:21:03'),
+(11, 2, 'Elvin Yuliani, S.Kep, Ners, M.Kep', '19760729 200012 2 003', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:07', '2023-08-16 04:21:07'),
+(12, 2, 'Rina Parina, A.MK, S.KM.M.Epid., M.H.Kes', '19751105 199803 2 002', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:36', '2023-08-16 04:22:36'),
+(13, 2, 'Maulana Iskandar, A.Md.Kep', '19800317 201410 1 003', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:47', '2023-08-16 04:21:47'),
+(14, 2, 'Wahyu Taufik Pirdaus., S.KM', '19790512 200501 1 008', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Pengatur Tk I/IId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:49', '2023-08-16 04:22:49'),
+(15, 2, 'Wendi Dinapis, S.ST', '19890202 202012 1 011', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Penata Muda/IIIa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:53', '2023-08-16 04:22:53'),
+(16, 2, 'N Elih Harlina, AM.Keb, S.KM, M.H.Kes', '19651228 198603 2 008', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:06', '2023-08-16 04:22:06'),
+(17, 2, 'Teni Kristiani, SIP', '19720511 199402 2 001', 'Tim Pembina Cluster Binaan', 'Cluster 1', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:43', '2023-08-16 04:22:43'),
+(18, 2, 'Iyen Nuryanah, SST, M.Si', '19700206 199303 2 002', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:50', '2023-08-16 04:21:50'),
+(19, 2, 'Priliana Susanty, S.T, M.Si', '19810426 200501 2 012', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:29', '2023-08-16 04:22:29'),
+(20, 2, 'Leni Nuraeni HR, S.Kep', '19760720 199703 2 002', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:54', '2023-08-16 04:21:54'),
+(21, 2, 'Otong Kusmana, S.KM, M.P.H.', '19760406 200012 1 003', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:09', '2023-08-16 04:22:09'),
+(22, 2, 'Nining Ratningsih., Am.Keb', '19751014 200012 2 002', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Penata Muda Tk I/IIIb', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:23', '2023-08-16 04:22:23'),
+(23, 2, 'Wila Susiani Dewi, SKM', '19751026 200701 2 004', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:56', '2023-08-16 04:22:56'),
+(24, 2, 'Rahmaasih S.Abdulgani, S.Kep.Ners', '19710421 199403 2 004', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:31', '2023-08-16 04:21:31'),
+(25, 2, 'Asep Abdurahman', '19760611 200801 1 004', 'Tim Pembina Cluster Binaan', 'Cluster 2', 'Pengatur Tk I/IId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:20:42', '2023-08-16 04:20:42'),
+(26, 2, 'H. Rd. Mauludin Muchamad, SKM, M.KM', '19720428 199703 1 002', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:23', '2023-08-16 04:21:23'),
+(27, 2, 'Hj. Iceu Herlina, Am.Keb.,S.KM', '19770727 201001 2 005', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Penata/IIIc', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:44', '2023-08-16 04:21:44'),
+(28, 2, 'Tiaraima Sisinta, S.KM, M.K.M.', '19820705 200902 2 010', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Penata/IIIc', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:46', '2023-08-16 04:22:46'),
+(29, 2, 'Ratih Indriane Septiani, S.Kep,Ners.', '19780909 200902 2 005', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:39', '2023-08-16 04:22:39'),
+(30, 2, 'dr. Hj Ratih Tedjasukmana', '19710524 200212 2 005', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:13', '2023-08-16 04:21:13'),
+(31, 2, 'Dede Subekti, SPd, M.Kes', '19730101 199403 1 009', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:20:55', '2023-08-16 04:20:55'),
+(32, 2, 'Yusuf Rifai Romli, S.KM, M.Epid.', '19700113 199501 1 001', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:23:05', '2023-08-16 04:23:05'),
+(33, 2, 'Heni Handayani, A.Md, S.KM, M.K.M', '19850325 200801 2 003', 'Tim Pembina Cluster Binaan', 'Cluster 3', 'Penata/IIIc', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:20', '2023-08-16 04:21:20'),
+(34, 2, 'H. Epi Edwar Lutpi, S.KM, M.K.M.', '19700816 198912 1 001', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:17', '2023-08-16 04:21:17'),
+(35, 2, 'Elis Supartini, S.IP, M.IP', '19680122 198903 2 005', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:10', '2023-08-16 04:21:10'),
+(36, 2, 'Nurul Fadhilah., S.ST,MM', '19890718 201704 2 001', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Penata Muda Tk I/IIIb', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:26', '2023-08-16 04:22:26'),
+(37, 2, 'Yeti Susanti, S.P, M.Si.', '19830423 200604 2 009', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:23:02', '2023-08-16 04:23:02'),
+(38, 2, 'Asep Yayat Nurhidayat, S.Sos, M.Si', '19760812 201410 1 001', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Penata Muda Tk I/IIIb', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:20:45', '2023-08-16 04:20:45'),
+(39, 2, 'Mira Miratul Jannah, S.Si, Apt, M.Farm', '19821221 200902 2 004', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:01', '2023-08-16 04:22:01'),
+(40, 2, 'Dedeh Hartati, AM.Keb, S.KM.', '19651231 198603 2 090', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:20:59', '2023-08-16 04:20:59'),
+(41, 2, 'Basuki Kartono, SKM, MKM', '19660220 198903 1 007', 'Tim Pembina Cluster Binaan', 'Cluster 4', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:20:52', '2023-08-16 04:20:52'),
+(42, 2, 'Rahayu Nurhaida M. S.SiT, MM.Kes, M.Si', '198301032006042009', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:32', '2023-08-16 04:22:32'),
+(43, 2, 'Neneng Teni Kristinawati, S.Kep Ners.,M.M', '19820411 200902 2 004', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Pembina/IVa', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:16', '2023-08-16 04:22:16'),
+(44, 2, 'Hendah Mariawati, AM.G.', '19700225 199403 2 005', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:26', '2023-08-16 04:21:26'),
+(45, 2, 'Candrawati Puspita Dewi, A.Md.Kes, S.IP.', '19750613 199503 2 001', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:20:49', '2023-08-16 04:20:49'),
+(46, 2, 'Ai Sukmawati, S.KM', '19800809 201410 2 002', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Penata/IIIc', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:20:36', '2023-08-16 04:20:36'),
+(47, 2, 'Yati Nurhayati, S.KM', '19830115 201101 2 003', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Penata Tk I/IIId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:59', '2023-08-16 04:22:59'),
+(48, 2, 'Idris Maulana, S.Kep.Ners', '19750929 199703 1 001', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Pengatur Tk I/IId', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:21:58', '2023-08-16 04:21:58'),
+(49, 2, 'Noneng Sariningsih, S.KM., M.K.M', '19750909 200003 2 002', 'Tim Pembina Cluster Binaan', 'Cluster 5', 'Penata/IIIc', '-', 'dinkes@tasikmalayakab.go.id', '2023-08-16 04:22:20', '2023-08-16 04:22:20');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -402,7 +469,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `nip`, `akun`, `email`, `email_verified_at`, `password`, `foto`, `level`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
@@ -436,32 +503,38 @@ INSERT INTO `users` (`id`, `name`, `nip`, `akun`, `email`, `email_verified_at`, 
 --
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `dokumen`
+--
+ALTER TABLE `dokumen`
+  ADD PRIMARY KEY (`id_dokumen`);
+
+--
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`),
   ADD UNIQUE KEY `kategori_nama_kategori_unique` (`nama_kategori`);
 
 --
--- Indexes for table `klinik`
+-- Indeks untuk tabel `klinik`
 --
 ALTER TABLE `klinik`
   ADD PRIMARY KEY (`id_klinik`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `pendamping`
+-- Indeks untuk tabel `pendamping`
 --
 ALTER TABLE `pendamping`
   ADD PRIMARY KEY (`id_pendamping`),
@@ -469,7 +542,7 @@ ALTER TABLE `pendamping`
   ADD KEY `produk_id_kategori_foreign` (`id_kategori`);
 
 --
--- Indexes for table `personal_access_tokens`
+-- Indeks untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -477,26 +550,26 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `pjmutuklinik`
+-- Indeks untuk tabel `pjmutuklinik`
 --
 ALTER TABLE `pjmutuklinik`
   ADD PRIMARY KEY (`id_pjmutuklinik`);
 
 --
--- Indexes for table `pjmutupkm`
+-- Indeks untuk tabel `pjmutupkm`
 --
 ALTER TABLE `pjmutupkm`
   ADD PRIMARY KEY (`id_pjmutupkm`),
   ADD UNIQUE KEY `member_kode_member_unique` (`pjmutupkm`);
 
 --
--- Indexes for table `pkm`
+-- Indeks untuk tabel `pkm`
 --
 ALTER TABLE `pkm`
   ADD PRIMARY KEY (`id_pkm`);
 
 --
--- Indexes for table `sessions`
+-- Indeks untuk tabel `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
@@ -504,13 +577,13 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- Indexes for table `setting`
+-- Indeks untuk tabel `setting`
 --
 ALTER TABLE `setting`
   ADD PRIMARY KEY (`id_setting`);
 
 --
--- Indexes for table `tpcb`
+-- Indeks untuk tabel `tpcb`
 --
 ALTER TABLE `tpcb`
   ADD PRIMARY KEY (`id_tpcb`),
@@ -518,94 +591,100 @@ ALTER TABLE `tpcb`
   ADD KEY `tpcb_id_kategori_foreign` (`id_kategori`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `dokumen`
+--
+ALTER TABLE `dokumen`
+  MODIFY `id_dokumen` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `klinik`
+-- AUTO_INCREMENT untuk tabel `klinik`
 --
 ALTER TABLE `klinik`
-  MODIFY `id_klinik` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_klinik` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `pendamping`
+-- AUTO_INCREMENT untuk tabel `pendamping`
 --
 ALTER TABLE `pendamping`
   MODIFY `id_pendamping` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `personal_access_tokens`
+-- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `pjmutuklinik`
+-- AUTO_INCREMENT untuk tabel `pjmutuklinik`
 --
 ALTER TABLE `pjmutuklinik`
   MODIFY `id_pjmutuklinik` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `pjmutupkm`
+-- AUTO_INCREMENT untuk tabel `pjmutupkm`
 --
 ALTER TABLE `pjmutupkm`
   MODIFY `id_pjmutupkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `pkm`
+-- AUTO_INCREMENT untuk tabel `pkm`
 --
 ALTER TABLE `pkm`
-  MODIFY `id_pkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_pkm` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
--- AUTO_INCREMENT for table `setting`
+-- AUTO_INCREMENT untuk tabel `setting`
 --
 ALTER TABLE `setting`
   MODIFY `id_setting` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tpcb`
+-- AUTO_INCREMENT untuk tabel `tpcb`
 --
 ALTER TABLE `tpcb`
-  MODIFY `id_tpcb` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_tpcb` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `pendamping`
+-- Ketidakleluasaan untuk tabel `pendamping`
 --
 ALTER TABLE `pendamping`
   ADD CONSTRAINT `produk_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);
 
 --
--- Constraints for table `tpcb`
+-- Ketidakleluasaan untuk tabel `tpcb`
 --
 ALTER TABLE `tpcb`
   ADD CONSTRAINT `tpcb_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);

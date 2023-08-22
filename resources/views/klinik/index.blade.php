@@ -26,6 +26,7 @@
                         <th>Klinik</th>
                         <th>Kode Klinik</th>
                         <th>Alamat</th>
+                        <th>Dokter</th>
                         <th>Hasil Akre</th>
                         <th>Tahun Akre</th>
 						<th>No Izin Klinik</th>
@@ -45,7 +46,7 @@
       
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 15,
+                "iDisplayLength": 10,
                 processing: true,
                 autoWidth: false,
                 ajax: {
@@ -61,6 +62,7 @@
                     {data: 'nama_klinik', name: 'nama_klinik' , width: '20%', class: 'text-left' },
                     {data: 'kode_klinik', name: 'kode_klinik' , width: '10%', class: 'text-center' },
                     {data: 'alamat', name: 'alamat' , width: '30%', class: 'text-justify' },
+                    {data: 'dokter', name: 'dokter' , width: '15%', class: 'text-center' },
                     {data: 'nilai_akre', name: 'nilai_akre' , width: '8%', class: 'text-center' },
                     {data: 'tahun_akre', name: 'tahun_akre' , width: '8%', class: 'text-center' },
                     {data: 'noizin', name: 'noizin' , width: '15%', class: 'text-center' },
@@ -112,6 +114,7 @@
                     $('#modal-form [name=nama_klinik]').val(response.nama_klinik);
                     $('#modal-form [name=kode_klinik]').val(response.kode_klinik);
                     $('#modal-form [name=alamat]').val(response.alamat);
+                    $('#modal-form [name=dokter]').val(response.dokter);
                     $('#modal-form [name=nilai_akre]').val(response.nilai_akre);              
                     $('#modal-form [name=tahun_akre]').val(response.tahun_akre);
                     $('#modal-form [name=noizin]').val(response.noizin);

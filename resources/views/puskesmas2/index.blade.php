@@ -27,9 +27,7 @@ Kriteria Kawasan Berdasarkan SK
                         <th>Kriteria Kawasan</th>
                         <th>Non / Rawat Inap</th>
                       	<th>Non / Poned</th>
-                        <th>Non / BLUD</th>
-                      	<th>Latitude</th>
-                        <th>Longitude</th>                 
+                        <th>Non / BLUD</th>        
                     </thead>
                 </table>
             </div>
@@ -42,7 +40,7 @@ Kriteria Kawasan Berdasarkan SK
 
         $(function() {
             table = $('.table').DataTable({
-                "iDisplayLength": 15,
+                "iDisplayLength": 10,
                 processing: true,
                 autoWidth: false,
                 ajax: {
@@ -63,10 +61,7 @@ Kriteria Kawasan Berdasarkan SK
                     {data: 'kawasan', name: 'kawasan' , width: '10%', class: 'text-center' },
                     {data: 'inap', name: 'inap' , width: '3%', class: 'text-center' },
                     {data: 'poned', name: 'poned' , width: '3%', class: 'text-center' },
-                    {data: 'blud', name: 'blud' , width: '3%', class: 'text-center' },                  
-                    {data: 'latitude', name: 'latitude' , width: '5%', class: 'text-center' },
-                    {data: 'longitude', name: 'longitude' , width: '5%', class: 'text-center' },
-                ]
+                    {data: 'blud', name: 'blud' , width: '3%', class: 'text-center' },
             });
         });
     </script>

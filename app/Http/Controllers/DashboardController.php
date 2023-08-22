@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dokumen;
 use App\Models\Kategori;
 use App\Models\Klinik;
 use App\Models\PjMutuKlinik;
@@ -14,8 +15,9 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index()
-    {
+    {      	
         $kategori = Kategori::count();
+        $dokumen = Dokumen::count();
 		$klinik = Klinik::count();    
         $pendamping = Pendamping::count();
         $pkm = Puskesmas::count();      
@@ -24,9 +26,9 @@ class DashboardController extends Controller
         $tpcb = Tpcb::count();
 
         if (auth()->user()->level == 1) {
-            return view('dashboard.admin', compact('kategori', 'klinik', 'pendamping', 'pkm', 'pjmutupkm', 'pjmutuklinik', 'tpcb'));
+            return view('dashboard.admin', compact('kategori', 'dokumen', 'klinik', 'pendamping', 'pkm', 'pjmutupkm', 'pjmutuklinik', 'tpcb'));
         } else {
-            return view('dashboard.pendamping', compact('kategori', 'klinik', 'pendamping', 'pkm', 'pjmutupkm', 'pjmutuklinik', 'tpcb'));
+            return view('dashboard.pendamping', compact('kategori', 'dokumen',  'klinik', 'pendamping', 'pkm', 'pjmutupkm', 'pjmutuklinik', 'tpcb'));
         }
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\{
     DashboardController,
+    DokumenController,
     KategoriController,
     KlinikController,
 	Klinik2Controller,
@@ -15,6 +16,10 @@ use App\Http\Controllers\{
     Puskesmas2Controller,
     TpcbController,
     Tpcb2Controller,
+    TpcbClusterController,
+    Tpcb2ClusterController,
+    TpcbFungsiController,
+    Tpcb2FungsiController,
     UserController,
     SettingController,
     PDFController,
@@ -70,12 +75,19 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/tpcb/delete-selected', [TpcbController::class, 'deleteSelected'])->name('tpcb.delete_selected');
         Route::resource('/tpcb', TpcbController::class);
 
+        Route::get('/tpcbfungsi', [TpcbFungsiController::class, 'index'])->name('tpcbfungsi.index');
+
+        Route::get('/tpcbcluster', [TpcbClusterController::class, 'index'])->name('tpcbcluster.index');
+
         Route::get('/user/data', [UserController::class, 'data'])->name('user.data');
         Route::resource('/user', UserController::class);
 
         Route::get('/setting', [SettingController::class, 'index'])->name('setting.index');
         Route::get('/setting/first', [SettingController::class, 'show'])->name('setting.show');
         Route::post('/setting', [SettingController::class, 'update'])->name('setting.update');
+       
+      	Route::get('/dokumen/data', [KlinikController::class, 'data'])->name('dokumen.data');
+        Route::resource('/dokumen', KlinikController::class);
 
     });
 
@@ -97,6 +109,10 @@ Route::group(['middleware' => 'auth'], function () {
       
         Route::get('/tpcb2/data', [Tpcb2Controller::class, 'data'])->name('tpcb2.data');
         Route::resource('/tpcb2', Tpcb2Controller::class);
+
+        Route::get('/tpcb2fungsi', [Tpcb2FungsiController::class, 'index'])->name('tpcb2fungsi.index');
+
+        Route::get('/tpcb2cluster', [Tpcb2ClusterController::class, 'index'])->name('tpcb2cluster.index');
     });
 
     Route::group(['middleware' => 'level:1,2'], function () {
