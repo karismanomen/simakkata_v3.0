@@ -275,15 +275,15 @@ table.dataTable {
 }
 table.dataTable thead th,
 table.dataTable tfoot th {
-    background-color: #6c68b1;
+    background-color: #2596be;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
     color: white;
 }
 table.dataTable thead th,
 table.dataTable thead td {
-    padding: 10px;
+    padding: 12px;
     vertical-align: middle;
     border-bottom: 0px solid rgba(0, 0, 0, 0.5);
 }
@@ -298,10 +298,10 @@ table.dataTable tfoot td {
 }
 table.dataTable tbody tr {
     text-align: left;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12.5px;
+    font-weight: 400;
     font-style: oblique;
-    background-color: white;
+    background-color: rgb(166, 210, 226);
 }
 table.dataTable tbody tr.selected > * {
     box-shadow: inset 0 0 0 9999px rgba(13, 110, 253, 0.9);
@@ -469,7 +469,7 @@ table.dataTable.compact tfoot th,
 table.dataTable.compact tfoot td,
 table.dataTable.compact tbody th,
 table.dataTable.compact tbody td {
-    padding: 4px;
+    padding: 2px;
 }
 table.dataTable th,
 table.dataTable td {

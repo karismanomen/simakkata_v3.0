@@ -1,23 +1,23 @@
 @extends('layouts.master')
 
 @section('title')
-Tugas Dan Fungsi TPCB
+Tugas TPCB
 @endsection
 
 @section('breadcrumb')
     @parent
-    <li class="active">Tugas Dan Fungsi TPCB</li>
+    <li class="active">Tugas TPCB</li>
 @endsection
 
 @section('content')
 
-<h1 class='text-center'>Tugas Dan Fungsi TPCB</h1>
+<h1 class='text-center'></h1>
     <div class="row">
-        <div class="col-md-6">
-            <div class="card">
+        <div class="container">
+            <div class="table">
                 <div class="card-header text-center bg-primary"><b>Tugas Ketua Tim TPCB</b></div>
                 <div class="card-body">
-                    <table class="table table-bordered table-hover">
+                    <table class="table">
                         <tbody>
                             <td>1</td>
                             <td>Memimpin anggota tim untuk mempelajari kembali rencana pembinaan yang telah disusun dan membuat penjadwalan pembinaan bersama.</td>
@@ -46,14 +46,14 @@ Tugas Dan Fungsi TPCB
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card">
+        <div class="container">
+            <div class="table">
                 <div class="card-header text-center bg-primary"><b>Tugas Anggota Tim TPCB</b></div>
                 <div class="card-body">
-                    <table class="table table-bordered table-hover">
+                    <table class="table">
                         <tbody>
                             <td>1</td>
-                            <td>1.	Membuat jadwal pembinaan sesuai arahan ketua tim dan kesepakatan Bersama.</td>
+                            <td>Membuat jadwal pembinaan sesuai arahan ketua tim dan kesepakatan Bersama.</td>
                         </tbody>
                         <tbody>
                             <td>2</td>

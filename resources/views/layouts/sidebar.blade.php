@@ -31,18 +31,18 @@
                 </li>
                 <li>
                     <a href="{{ route('pendamping.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Pendamping</span>
+                        <i class="fa fa-users"></i> <span>Pendamping</span>
                     </a>
                 </li>
                 <li class="header">DATA TPCB</li>
               	<li>
                     <a href="{{ route('tpcb.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Tim TPCB</span>
+                        <i class="fa fa-users"></i> <span>Tim TPCB</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('tpcbfungsi.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Tugas dan Fungsi TPCB</span>
+                        <i class="fa fa-cubes"></i> <span>Tugas/Fungsi TPCB</span>
                     </a>
                 </li>
                 <li>
@@ -95,18 +95,18 @@
                 <li class="header">DATA MASTER</li>
           		<li>
                     <a href="{{ route('pendamping2.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Pendamping</span>
+                        <i class="fa fa-users"></i> <span>Pendamping</span>
                     </a>
                 </li>
                 <li class="header">DATA TPCB</li>
                 <li>
                     <a href="{{ route('tpcb2.index') }}">
-                        <i class="fa fa-cubes"></i> <span> Tim TPCB</span>
+                        <i class="fa fa-users"></i> <span> Tim TPCB</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('tpcb2fungsi.index') }}">
-                        <i class="fa fa-cubes"></i> <span>Tugas dan Fungsi TPCB</span>
+                        <i class="fa fa-cubes"></i> <span>Tugas/Fungsi TPCB</span>
                     </a>
                 </li>
                 <li>

@@ -47,7 +47,7 @@
     @stack('css')
 </head>
 
-<body class="hold-transition skin-purple sidebar-mini">
+<body class="hold-transition skin-blue-light sidebar-mini">
     <div class="wrapper">
 
         @includeIf('layouts.header')

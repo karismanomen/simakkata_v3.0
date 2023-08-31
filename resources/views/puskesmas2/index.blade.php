@@ -62,6 +62,7 @@ Kriteria Kawasan Berdasarkan SK
                     {data: 'inap', name: 'inap' , width: '3%', class: 'text-center' },
                     {data: 'poned', name: 'poned' , width: '3%', class: 'text-center' },
                     {data: 'blud', name: 'blud' , width: '3%', class: 'text-center' },
+                ]
             });
         });
     </script>

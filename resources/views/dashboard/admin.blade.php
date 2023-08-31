@@ -76,9 +76,9 @@
         </div>
     </div>
 <h1 class='text-center'>Roadmap Binaan Akreditasi</h1>
-    <div class="container">
+    <div class="row">
         <div class="col-md-6">
-            <div class="card">
+            <div class="table">
                 <div class="card-header text-center bg-primary"><b>Cluster 1 TPCB</b></div>
                 <div class="card-body">
                     <table class="table table-bordered table-hover">
@@ -134,7 +134,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center bg-primary"><b>Cluster 2 TPCB</b></div>
-                <div class="card-body">
+                <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead class="text-center">
                             <th>No</th>
@@ -188,7 +188,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center bg-primary"><b>Cluster 3 TPCB</b></div>
-                <div class="card-body">
+                <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead class="text-center">
                             <th>No</th>
@@ -242,7 +242,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center bg-primary"><b>Cluster 4 TPCB</b></div>
-                <div class="card-body">
+                <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead class="text-center">
                             <th>No</th>
@@ -296,7 +296,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center bg-primary"><b>Cluster 5 TPCB</b></div>
-                <div class="card-body">
+                <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead class="text-center">
                             <th>No</th>

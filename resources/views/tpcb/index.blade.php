@@ -38,7 +38,8 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                                 <th>Pangkat/Golongan</th>
                                 <th>Telepon</th>
                                 <th>Email</th>
-                                <th width="4%"><i class="fa fa-cog"></i></th>
+                            </thead>
+                                <th width="6%"><i class="fa fa-cog"></i></th>
                             </thead>
                         </table>
                     </form>
@@ -74,12 +75,12 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                         searchable: false,
                         sortable: false
                     },
-                    {data: 'nama_tpcb', name: 'nama_tpcb' , width: '15%', class: 'text-left' },
-                    {data: 'nip', name: 'nip' , width: '10%', class: 'text-left' },
-                    {data: 'jabatan_akre', name: 'jabatan_akre' , width: '10%', class: 'text-left' },
-                    {data: 'cluster', name: 'cluster' , width: '5%', class: 'text-left' },
-                    {data: 'pangkat', name: 'pangkat' , width: '7%', class: 'text-left' },
-                    {data: 'telepon', name: 'telepon' , width: '10%', class: 'text-left' },
+                    {data: 'nama_tpcb', name: 'nama_tpcb' , width: '18%', class: 'text-left' },
+                    {data: 'nip', name: 'nip' , width: '11%', class: 'text-left' },
+                    {data: 'jabatan_akre', name: 'jabatan_akre' , width: '5%', class: 'text-center' },
+                    {data: 'cluster', name: 'cluster' , width: '5%', class: 'text-center' },
+                    {data: 'pangkat', name: 'pangkat' , width: '5%', class: 'text-center' },
+                    {data: 'telepon', name: 'telepon' , width: '7%', class: 'text-center' },
                     {data: 'email', name: 'email' , width: '10%', class: 'text-left' },
                     {
                         data: 'aksi',

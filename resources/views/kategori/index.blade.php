@@ -22,7 +22,7 @@
                         <thead>
                             <th width="1%">No</th>
                             <th>Kategori Akreditasi</th>
-                            <th width="4%"><i class="fa fa-cog"></i></th>
+                            <th width="6%"><i class="fa fa-cog"></i></th>
                         </thead>
                     </table>
                 </div>
@@ -47,13 +47,15 @@
                 columns: [{
                         data: 'DT_RowIndex',
                         searchable: false,
-                        sortable: false
+                        sortable: false,
+                        class: 'text-center'
                     },
                     {
-                        data: 'nama_kategori'
+                        data: 'nama_kategori', class: 'text-left'
                     },
                     {
                         data: 'aksi',
+                        class: 'text-center',
                         searchable: false,
                         sortable: false
                     },
