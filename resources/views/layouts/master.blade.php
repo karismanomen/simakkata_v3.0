@@ -14,24 +14,24 @@
 
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet"
-        href="{{ asset('/AdminLTE-SIMAKKATA/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+        href="{{ asset('/simakkata/plugins/bootstrap/dist/css/bootstrap.min.css') }}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="{{ asset('/AdminLTE-SIMAKKATA/bower_components/font-awesome/css/font-awesome.min.css') }}">
+        href="{{ asset('/simakkata/plugins/font-awesome/css/font-awesome.min.css') }}">
 
     <!-- Ionicons -->
-    <link rel="stylesheet" href="{{ asset('/AdminLTE-SIMAKKATA/bower_components/Ionicons/css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/simakkata/plugins/Ionicons/css/ionicons.min.css') }}">
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('/AdminLTE-SIMAKKATA/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/simakkata/dist/css/AdminLTE.min.css') }}">
 
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{ asset('/AdminLTE-SIMAKKATA/dist/css/skins/_all-skins.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/simakkata/dist/css/skins/_all-skins.min.css') }}">
 
     <!-- DataTables -->
     <link rel="stylesheet"
-        href="{{ asset('/AdminLTE-SIMAKKATA/bower_components/datatables.net-bs/css/dataTables.bootstrap4.min.css') }}">
+        href="{{ asset('/simakkata/plugins/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,7 +47,7 @@
     @stack('css')
 </head>
 
-<body class="hold-transition skin-blue-light sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
         @includeIf('layouts.header')
@@ -83,22 +83,22 @@
     <!-- ./wrapper -->
 
     <!-- jQuery 3 -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('simakkata/plugins/jquery/dist/jquery.min.js') }}"></script>
 
     <!-- Scripts -->
 
 
     <!-- Bootstrap 3.3.7 -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('simakkata/plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- Moment -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/bower_components/moment/min/moment.min.js') }}"></script>
+    <script src="{{ asset('simakkata/plugins/moment/min/moment.min.js') }}"></script>
 
     <!-- DataTables -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('AdminLTE-SIMAKKATA/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}">
+    <script src="{{ asset('simakkata/plugins/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('simakkata/plugins/datatables.net-bs/js/dataTables.bootstrap.min.js') }}">
     </script>
     <!-- AdminLTE App -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('simakkata/dist/js/adminlte.min.js') }}"></script>
     <!-- Validator -->
     <script src="{{ asset('js/validator.min.js') }}"></script>
 

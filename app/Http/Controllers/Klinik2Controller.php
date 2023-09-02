@@ -12,7 +12,7 @@ class Klinik2Controller extends Controller
 {
     public function index()
     {
-        return view('klinik2.index');
+        return view('klinik.klinik2.index');
     }
 
     public function data()

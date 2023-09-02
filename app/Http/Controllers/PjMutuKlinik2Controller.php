@@ -19,7 +19,7 @@ class PjMutuKlinik2Controller extends Controller
      */
     public function index()
     {
-        return view('pjmutuklinik2.index');
+        return view('pjmutuklinik.pjmutuklinik2.index');
     }
 
     public function data()

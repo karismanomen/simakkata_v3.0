@@ -19,7 +19,7 @@ class PjMutuPuskesmas2Controller extends Controller
      */
     public function index()
     {
-        return view('pjmutupkm2.index');
+        return view('pjmutupkm.pjmutupkm2.index');
     }
 
     public function data()

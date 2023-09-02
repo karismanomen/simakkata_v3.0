@@ -12,6 +12,6 @@ class Tpcb2FungsiController extends Controller
 {
     public function index()
     {
-        return view('tpcb2fungsi.index');
+        return view('tpcbfungsi.tpcb2fungsi.index');
     }
 }

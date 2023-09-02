@@ -12,6 +12,6 @@ class Tpcb2ClusterController extends Controller
 {
     public function index()
     {
-        return view('tpcb2cluster.index');
+        return view('tpcbcluster.tpcb2cluster.index');
     }
 }

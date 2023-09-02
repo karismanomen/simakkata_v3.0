@@ -56,7 +56,7 @@ Kriteria Kawasan Berdasarkan SK
                 processing: true,
                 autoWidth: false,
                 ajax: {
-                    url: '{{ route('puskesmas.data') }}',
+                    url: '{{ route('puskesmas.data')}}',
                 },
                 columns: [{
                         data: 'DT_RowIndex',
@@ -67,8 +67,8 @@ Kriteria Kawasan Berdasarkan SK
                     },
                     {data: 'nama', name: 'nama' , width: '8%', class: 'text-left' },
                     {data: 'kode_fasyankes', name: 'kode_fasyankes' , width: '3%', class: 'text-center' },
-                    {data: 'alamat', name: 'alamat' , width: '50%', class: 'text-justify' },
-                    {data: 'email', name: 'email' , width: '40%', class: 'text-justify' },
+                    {data: 'alamat', name: 'alamat' , width: '40%', class: 'text-justify' },
+                    {data: 'email', name: 'email' , width: '15%', class: 'text-justify' },
                     {data: 'nilai_akre', name: 'nilai_akre' , width: '5%', class: 'text-center' },
                     {data: 'tahun_akre', name: 'tahun_akre' , width: '5%', class: 'text-center' },
                     {data: 'noizin', name: 'noizin' , width: '10%', class: 'text-center' },

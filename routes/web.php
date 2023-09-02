@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\{
     DashboardController,
-    DokumenController,
     KategoriController,
     KlinikController,
 	Klinik2Controller,
@@ -84,35 +83,31 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/setting', [SettingController::class, 'index'])->name('setting.index');
         Route::get('/setting/first', [SettingController::class, 'show'])->name('setting.show');
-        Route::post('/setting', [SettingController::class, 'update'])->name('setting.update');
-       
-      	Route::get('/dokumen/data', [KlinikController::class, 'data'])->name('dokumen.data');
-        Route::resource('/dokumen', KlinikController::class);
-
+        Route::post('/setting', [SettingController::class, 'update'])->name('setting.update');       
     });
 
     Route::group(['middleware' => 'level:2'], function () {
-        Route::get('/klinik2/data', [Klinik2Controller::class, 'data'])->name('klinik2.data');
+        Route::get('/klinik/klinik2/data', [Klinik2Controller::class, 'data'])->name('klinik2.data');
         Route::resource('/klinik2', Klinik2Controller::class);  
       
-        Route::get('/pendamping2/data', [Pendamping2Controller::class, 'data'])->name('pendamping2.data');
+        Route::get('/pendamping/pendamping2/data', [Pendamping2Controller::class, 'data'])->name('pendamping2.data');
         Route::resource('/pendamping2', Pendamping2Controller::class);
       
-        Route::get('/pjmutuklinik2/data', [PjMutuKlinik2Controller::class, 'data'])->name('pjmutuklinik2.data');
+        Route::get('/pjmutuklinik/pjmutuklinik2/data', [PjMutuKlinik2Controller::class, 'data'])->name('pjmutuklinik2.data');
         Route::resource('/pjmutuklinik2', PjMutuKlinik2Controller::class);
       
-        Route::get('/pjmutupkm2/data', [PjMutuPuskesmas2Controller::class, 'data'])->name('pjmutupkm2.data');
+        Route::get('/pjmutupkm/pjmutupkm2/data', [PjMutuPuskesmas2Controller::class, 'data'])->name('pjmutupkm2.data');
         Route::resource('/pjmutupkm2', PjMutuPuskesmas2Controller::class);
 
-        Route::get('/puskesmas2/data', [Puskesmas2Controller::class, 'data'])->name('puskesmas2.data');
+        Route::get('/puskesmas/puskesmas2/data', [Puskesmas2Controller::class, 'data'])->name('puskesmas2.data');
         Route::resource('/puskesmas2', Puskesmas2Controller::class);
       
-        Route::get('/tpcb2/data', [Tpcb2Controller::class, 'data'])->name('tpcb2.data');
+        Route::get('/tpcb/tpcb2/data', [Tpcb2Controller::class, 'data'])->name('tpcb2.data');
         Route::resource('/tpcb2', Tpcb2Controller::class);
 
-        Route::get('/tpcb2fungsi', [Tpcb2FungsiController::class, 'index'])->name('tpcb2fungsi.index');
+        Route::get('/tpcbfungsi/tpcb2fungsi', [Tpcb2FungsiController::class, 'index'])->name('tpcb2fungsi.index');
 
-        Route::get('/tpcb2cluster', [Tpcb2ClusterController::class, 'index'])->name('tpcb2cluster.index');
+        Route::get('/tpcbcluster/tpcb2cluster', [Tpcb2ClusterController::class, 'index'])->name('tpcb2cluster.index');
     });
 
     Route::group(['middleware' => 'level:1,2'], function () {

@@ -1,0 +1,4 @@
+section {
+    background-size: cover;
+    background-image: url({asset("simakkata/dist/img/bg.jpg")});
+}

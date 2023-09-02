@@ -20,7 +20,7 @@ class Pendamping2Controller extends Controller
     {
         $kategori = Kategori::all()->pluck('nama_kategori', 'id_kategori');
 
-        return view('pendamping2.index', compact('kategori'));
+        return view('pendamping.pendamping2.index', compact('kategori'));
     }
 
     public function data()

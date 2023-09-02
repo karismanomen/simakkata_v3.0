@@ -1,6 +1,5 @@
 @extends('layouts.auth')
-<div>
-</div>
+
 @section('login')
     <div class="login-box">
 
@@ -12,7 +11,7 @@
 
             <div class="login-logo">
                 <a href="{{ url('/') }}">
-                    <img src="{{ url($setting->path_logo) }}" alt="Logo Image" width="300px">
+                    <img src="{{ url($setting->path_logo) }}" alt="Logo Image" width="350px">
                 </a>
             </div>
 

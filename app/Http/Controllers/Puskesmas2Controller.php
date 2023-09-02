@@ -12,7 +12,7 @@ class Puskesmas2Controller extends Controller
 {
     public function index()
     {
-        return view('puskesmas2.index');
+        return view('puskesmas.puskesmas2.index');
     }
 
     public function data()

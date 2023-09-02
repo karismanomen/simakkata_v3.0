@@ -1,6 +1,7 @@
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
+    <br>
     <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
@@ -13,6 +14,8 @@
 
             </div>
         </div>
+        <br>
+
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
@@ -75,15 +78,15 @@
                 </li>
                 <li class="header">DOKUMEN</li>
                 <li>
-                    <a href="{{ route('dokumen.index') }}">
+                    <a href="/vfm/">
                         <i class="fa fa-home"></i> <span>Dokumen</span>
                     </a>
                 </li>
                 <li>          
-                <li class="header">SYSTEM</li>
+                <li class="header">SISTEM</li>
                 <li>
                     <a href="{{ route('user.index') }}">
-                        <i class="fa fa-users"></i> <span>User</span>
+                        <i class="fa fa-users"></i> <span>Pengguna</span>
                     </a>
                 </li>
                 <li>

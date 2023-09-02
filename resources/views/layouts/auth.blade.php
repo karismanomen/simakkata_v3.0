@@ -11,17 +11,17 @@
     <link rel="icon" href="{{ url($setting->path_logo) }}" type="image/png">
 
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="{{ asset('AdminLTE-SIMAKKATA/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('simakkata/plugins/bootstrap/dist/css/bootstrap.min.css') }}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="{{ asset('AdminLTE-SIMAKKATA/bower_components/font-awesome/css/font-awesome.min.css') }}">
+        href="{{ asset('simakkata/plugins/font-awesome/css/font-awesome.min.css') }}">
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('AdminLTE-SIMAKKATA/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('simakkata/dist/css/AdminLTE.min.css') }}">
 
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{ asset('AdminLTE-SIMAKKATA/plugins/iCheck/square/blue.css') }}">
+    <link rel="stylesheet" href="{{ asset('simakkata/plugins/iCheck/square/blue.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,11 +41,11 @@
     @yield('login')
 
     <!-- jQuery 3 -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('simakkata/plugins/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap 3.3.7 -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('simakkata/plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- iCheck -->
-    <script src="{{ asset('AdminLTE-SIMAKKATA/plugins/iCheck/icheck.min.js') }}"></script>
+    <script src="{{ asset('simakkata/plugins/iCheck/icheck.min.js') }}"></script>
     <!-- Validator -->
     <script src="{{ asset('js/validator.min.js') }}"></script>
     <script>

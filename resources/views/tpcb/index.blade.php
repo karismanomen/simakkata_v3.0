@@ -38,8 +38,7 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                                 <th>Pangkat/Golongan</th>
                                 <th>Telepon</th>
                                 <th>Email</th>
-                            </thead>
-                                <th width="6%"><i class="fa fa-cog"></i></th>
+                                <th width="8%"><i class="fa fa-cog"></i></th>
                             </thead>
                         </table>
                     </form>
@@ -61,7 +60,7 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                 processing: true,
                 autoWidth: false,
                 ajax: {
-                    url: '{{ route('tpcb.data') }}',
+                    url: '{{ route('tpcb.data')}}',
                 },
                 columns: [{
                         data: 'select_all',
@@ -76,12 +75,12 @@ Berdasarkan Surat Keputusan Nomor : 040/KEP.011/DINKES/2023 tentang Pembentukan 
                         sortable: false
                     },
                     {data: 'nama_tpcb', name: 'nama_tpcb' , width: '18%', class: 'text-left' },
-                    {data: 'nip', name: 'nip' , width: '11%', class: 'text-left' },
-                    {data: 'jabatan_akre', name: 'jabatan_akre' , width: '5%', class: 'text-center' },
+                    {data: 'nip', name: 'nip' , width: '11%', class: 'text-center' },
+                    {data: 'jabatan_akre', name: 'jabatan_akre' , width: '10%', class: 'text-center' },
                     {data: 'cluster', name: 'cluster' , width: '5%', class: 'text-center' },
                     {data: 'pangkat', name: 'pangkat' , width: '5%', class: 'text-center' },
                     {data: 'telepon', name: 'telepon' , width: '7%', class: 'text-center' },
-                    {data: 'email', name: 'email' , width: '10%', class: 'text-left' },
+                    {data: 'email', name: 'email' , width: '10%', class: 'text-center' },
                     {
                         data: 'aksi',
                         class: 'text-center',

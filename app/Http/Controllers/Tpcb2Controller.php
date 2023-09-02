@@ -20,7 +20,7 @@ class Tpcb2Controller extends Controller
     {
         $kategori = Kategori::all()->pluck('nama_kategori', 'id_kategori');
 
-        return view('tpcb2.index', compact('kategori'));
+        return view('tpcb.tpcb2.index', compact('kategori'));
     }
 
     public function data()
