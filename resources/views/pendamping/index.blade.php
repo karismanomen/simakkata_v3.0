@@ -76,8 +76,8 @@
                     },
                     {data: 'nama_pendamping', name: 'nama_pendamping' , width: '15%', class: 'text-left' },
                     {data: 'nip', name: 'nip' , width: '10%', class: 'text-center' },
-                    {data: 'jabatan_akre', name: 'jabatan_akre' , width: '10%', class: 'text-left' },
-                    {data: 'pangkat', name: 'pangkat' , width: '10%', class: 'text-left' },
+                    {data: 'jabatan_akre', name: 'jabatan_akre' , width: '10%', class: 'text-center' },
+                    {data: 'pangkat', name: 'pangkat' , width: '10%', class: 'text-center' },
                     {data: 'telepon', name: 'telepon' , width: '5%', class: 'text-center' },
                     {data: 'email', name: 'email' , width: '15%', class: 'text-left' },
                     {

@@ -1,79 +1,94 @@
 @extends('layouts.master')
 
 @section('title')
-Tugas TPCB
+Roadmap Cluster Binaan
 @endsection
 
 @section('breadcrumb')
     @parent
-    <li class="active">Tugas TPCB</li>
+    <li class="active">Roadmap Cluster Binaan</li>
 @endsection
 
 @section('content')
 
-<h1 class='text-center'>Tugas TPCB</h1>
+<h1 class='text-center'>Roadmap Cluster Binaan</h1>
     <div class="row">
         <div class="container">
-            <div class="card">
-                <div class="card-header text-center bg-primary"><b>Tugas Ketua Tim TPCB</b></div>
+        <div class="table">
+                <div class="card-header text-center bg-primary"><b>Cluster Binaan</b></div>
                 <div class="card-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered text-center">
+                        <thead class="text-center">
+                            <th>No</th>
+                            <th>Cluster 1</th>                            
+                            <th>Cluster 2</th>
+                            <th>Cluster 3</th>                            
+                            <th>Cluster 4</th>                                                       
+                            <th>Cluster 5</th>
+                        </thead>
                         <tbody>
                             <td>1</td>
-                            <td>Memimpin anggota tim untuk mempelajari kembali rencana pembinaan yang telah disusun dan membuat penjadwalan pembinaan bersama.</td>
+                            <td>Cikalong</td>
+                            <td>Cipatujah</td>
+                            <td>Karangjaya</td>
+                            <td>Bj.gambir</td>
+                            <td>Pnc.tengah</td>
                         </tbody>
                         <tbody>
                             <td>2</td>
-                            <td>Menjelaskan kembali tujuan pembinaan terpadu dan menyosialisasikan kepada anggota tim.</td>
+                            <td>Bj.asih</td>
+                            <td>Bntr.kalong</td>
+                            <td>Kr.nunggal</td>
+                            <td>Culamega</td>
+                            <td>Ciawi</td>
                         </tbody>
                         <tbody>
                             <td>3</td>
-                            <td>Memutuskan prioritas dan strategi pembinaan cluster binaan bersama angota tim.</td>
+                            <td>Cibalong</td>
+                            <td>Cikatomas</td>
+                            <td>Gn.tanjung</td>
+                            <td>Cineam</td>
+                            <td>Jamanis</td>
                         </tbody>
                         <tbody>
                             <td>4</td>
-                            <td>Mengoordinasikan anggota tim untuk melaksanakan rencana pembinaan sesuai jadwal yang telah disepakati berdasarkan urutan prioritas.</td>
+                            <td>Tj.jaya</td>
+                            <td>Pg.ageung</td>
+                            <td>Manonjaya</td>
+                            <td>Pr.ponteng</td>
+                            <td>Salopa</td>
                         </tbody>
                         <tbody>
                             <td>5</td>
-                            <td>Memimpin pembinaan ke cluster binaan, baik melalui forum pertemuan pembahasan, mekanisme umpan balik maupun kunjungan ke lapangan.</td>
+                            <td>Rajapolah</td>
+                            <td>Sdg.hilir</td>
+                            <td>Sukahening</td>
+                            <td>Taraju</td>
+                            <td>Cigalontang</td>
                         </tbody>
                         <tbody>
                             <td>6</td>
-                            <td>Melakukan evaluasi terhadap hasil pembinaan dan menyusun rencana tindak lanjut pembinaan.</td>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card">
-                <div class="card-header text-center bg-primary"><b>Tugas Anggota Tim TPCB</b></div>
-                <div class="card-body">
-                    <table class="table table-bordered">
-                        <tbody>
-                            <td>1</td>
-                            <td>Membuat jadwal pembinaan sesuai arahan ketua tim dan kesepakatan Bersama.</td>
+                            <td>Cisayong</td>
+                            <td>Jatiwaras</td>
+                            <td>Leuwisari</td>
+                            <td>Cisaruni</td>
+                            <td>Puspahiang</td>
                         </tbody>
                         <tbody>
-                            <td>2</td>
-                            <td>Memahami tujuan pembinaan terpadu.</td>
+                            <td>7</td>
+                            <td>Salawu</td>
+                            <td>Sariwangi</td>
+                            <td>Sukaraja</td>
+                            <td>Sukarame</td>
+                            <td>Sukaresik</td>
                         </tbody>
                         <tbody>
-                            <td>3</td>
-                            <td>Menyusun prioritas dan strategi pembinaan cluster sesuai arahan ketua tim.</td>
-                        </tbody>
-                        <tbody>
-                            <td>4</td>
-                            <td>Menyiapkan bahan pembinaan dan menyerahkan bahan ke ketua tim. Bahan pembinaan berdasarkan hasil analisis data sesuai hasil excersise pada rapat koordinasi.</td>
-                        </tbody>
-                        <tbody>
-                            <td>5</td>
-                            <td>Melaksanakan pembinaan ke cluster binaan bersama ketua tim.</td>
-                        </tbody>
-                        <tbody>
-                            <td>6</td>
-                            <td>Merangkum hasil temuan yang didapatkan pada waktu pelaksanaan pembinaan, menyusun laporan pembinaan untuk diserahkan ke ketua Tim.</td>
+                            <td>8</td>
+                            <td>Sukaratu</td>
+                            <td>Singaparna</td>
+                            <td>Mangunreja</td>
+                            <td>Kadipaten</td>
+                            <td>Tinewati</td>
                         </tbody>
                     </table>
                 </div>

@@ -4,7 +4,7 @@ use App\Http\Controllers\{
     DashboardController,
     KategoriController,
     KlinikController,
-	Klinik2Controller,
+    Klinik2Controller,
     PendampingController,
     Pendamping2Controller,
     PjMutuKlinikController,

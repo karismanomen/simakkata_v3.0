@@ -4268,6 +4268,7 @@ input[type="submit"].btn-block {
     margin-left: 1.25rem;
 }
 .card-header {
+    font-size: 8px;
     padding: 0.75rem 1.25rem;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);

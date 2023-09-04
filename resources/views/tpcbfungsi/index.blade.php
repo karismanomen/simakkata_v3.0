@@ -11,9 +11,9 @@ Tugas TPCB
 
 @section('content')
 
-<h1 class='text-center'></h1>
+<h1 class='text-center'>Tugas TPCB</h1>
     <div class="row">
-        <div class="container">
+        <div class="col-md-6">
             <div class="table">
                 <div class="card-header text-center bg-primary"><b>Tugas Ketua Tim TPCB</b></div>
                 <div class="card-body">
@@ -46,7 +46,7 @@ Tugas TPCB
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="col-md-6">
             <div class="table">
                 <div class="card-header text-center bg-primary"><b>Tugas Anggota Tim TPCB</b></div>
                 <div class="card-body">

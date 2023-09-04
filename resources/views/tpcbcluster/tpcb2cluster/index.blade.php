@@ -14,10 +14,10 @@ Roadmap Cluster Binaan
 <h1 class='text-center'>Roadmap Cluster Binaan</h1>
     <div class="row">
         <div class="container">
-            <div class=text-center class="card">
+        <div class="table">
                 <div class="card-header text-center bg-primary"><b>Cluster Binaan</b></div>
                 <div class="card-body">
-                    <table class="table table-bordered table-hover text-center">
+                    <table class="table table-bordered text-center">
                         <thead class="text-center">
                             <th>No</th>
                             <th>Cluster 1</th>                            
@@ -31,14 +31,14 @@ Roadmap Cluster Binaan
                             <td>Cikalong</td>
                             <td>Cipatujah</td>
                             <td>Karangjaya</td>
-                            <td>Bojonggambir</td>
-                            <td>Pancatengah</td>
+                            <td>Bj.gambir</td>
+                            <td>Pnc.tengah</td>
                         </tbody>
                         <tbody>
                             <td>2</td>
-                            <td>Bojongasih</td>
-                            <td>Bantarkalong</td>
-                            <td>Karangnunggal</td>
+                            <td>Bj.asih</td>
+                            <td>Bntr.kalong</td>
+                            <td>Kr.nunggal</td>
                             <td>Culamega</td>
                             <td>Ciawi</td>
                         </tbody>
@@ -46,22 +46,22 @@ Roadmap Cluster Binaan
                             <td>3</td>
                             <td>Cibalong</td>
                             <td>Cikatomas</td>
-                            <td>Gunungtanjung</td>
+                            <td>Gn.tanjung</td>
                             <td>Cineam</td>
                             <td>Jamanis</td>
                         </tbody>
                         <tbody>
                             <td>4</td>
-                            <td>Tanjungjaya</td>
-                            <td>Pagerageung</td>
+                            <td>Tj.jaya</td>
+                            <td>Pg.ageung</td>
                             <td>Manonjaya</td>
-                            <td>Parungponteng</td>
+                            <td>Pr.ponteng</td>
                             <td>Salopa</td>
                         </tbody>
                         <tbody>
                             <td>5</td>
                             <td>Rajapolah</td>
-                            <td>Sodonghilir</td>
+                            <td>Sdg.hilir</td>
                             <td>Sukahening</td>
                             <td>Taraju</td>
                             <td>Cigalontang</td>
