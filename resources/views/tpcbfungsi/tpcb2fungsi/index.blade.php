@@ -13,8 +13,8 @@ Tugas TPCB
 
 <h1 class='text-center'>Tugas TPCB</h1>
     <div class="row">
-        <div class="col-md-6">
-            <div class="table">
+        <div class="col-sm-12">
+            <div class="container-fluid">
                 <div class="card-header text-center bg-primary"><b>Tugas Ketua Tim TPCB</b></div>
                 <div class="card-body">
                     <table class="table">
@@ -46,8 +46,8 @@ Tugas TPCB
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="table">
+        <div class="col-sm-12">
+            <div class="container-fluid">
                 <div class="card-header text-center bg-primary"><b>Tugas Anggota Tim TPCB</b></div>
                 <div class="card-body">
                     <table class="table">

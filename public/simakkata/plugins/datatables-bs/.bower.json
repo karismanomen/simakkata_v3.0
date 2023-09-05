@@ -1,5 +1,5 @@
 {
-  "name": "datatables.net-bs",
+  "name": "datatables-bs",
   "description": "DataTables for jQuery with styling for [Bootstrap](http://getbootstrap.com/)",
   "main": [
     "js/dataTables.bootstrap.js",
@@ -44,5 +44,5 @@
   },
   "_source": "https://github.com/DataTables/Dist-DataTables-Bootstrap.git",
   "_target": "^2.1.1",
-  "_originalSource": "datatables.net-bs"
+  "_originalSource": "datatables-bs"
 }

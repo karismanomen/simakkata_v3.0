@@ -13,8 +13,8 @@ Roadmap Cluster Binaan
 
 <h1 class='text-center'>Roadmap Cluster Binaan</h1>
     <div class="row">
-        <div class="container">
-        <div class="table">
+        <div class="col-sm-12">
+        <div class="container-fluid">
                 <div class="card-header text-center bg-primary"><b>Cluster Binaan</b></div>
                 <div class="card-body">
                     <table class="table table-bordered text-center">

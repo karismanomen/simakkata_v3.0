@@ -2733,28 +2733,28 @@ a:focus {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-    border-top: 1px solid #f4f4f4;
+    border: 1px solid lightskyblue;
 }
 .table > thead > tr > th {
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #ffffff;
 }
 .table tr td .progress {
-    margin-top: 3px;
+    margin-top: 1px;
 }
 .table-bordered {
-    border: 1px solid #f4f4f4;
+    border: 5px solid lightblue;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-    border: 1px solid #f4f4f4;
+.table-bordered > tfoot > tr > td {  
+    border: 0px solid lightskyblue;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
 }
 .table.no-border,
 .table.no-border td,

@@ -14,18 +14,18 @@ For inclusion of this library using a standard `<script>` tag, rather than using
 ### npm
 
 ```
-npm install datatables.net-bs
+npm install datatables-bs
 ```
 
 ```
 var $ = require( 'jquery' );
-require( 'datatables.net-bs' )( window, $ );
+require( 'datatables-bs' )( window, $ );
 ```
 
 ### bower
 
 ```
-bower install --save datatables.net-bs
+bower install --save datatables-bs
 ```
 
 

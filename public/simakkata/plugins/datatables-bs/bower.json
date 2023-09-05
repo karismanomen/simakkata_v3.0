@@ -1,5 +1,5 @@
 {
-    "name": "datatables.net-bs",
+    "name": "datatables-bs",
     "description": "DataTables for jQuery with styling for [Bootstrap](http://getbootstrap.com/)",
     "main": [
         "js/dataTables.bootstrap.js",

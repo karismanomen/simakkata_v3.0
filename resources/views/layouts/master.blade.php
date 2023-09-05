@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ $setting->nama_aplikasi }} | @yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -31,7 +32,22 @@
 
     <!-- DataTables -->
     <link rel="stylesheet"
-        href="{{ asset('/simakkata/plugins/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+        href="{{ asset('/simakkata/plugins/datatables-bs/css/dataTables.bootstrap.min.css') }}">
+
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="plugins/morris.js/morris.css">
+
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap.css">
+
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/bootstrap-daterangepicker/daterangepicker.css">
+
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,14 +74,15 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1>
-                    @yield('title')
-                </h1>
+                <h1><div class="card-header text-center bg-primary-light"> @yield('title')</div></h1>                   </h1>
+                <br>
+                <div class="text-right">
                 <ol class="breadcrumb">
                     @section('breadcrumb')
                         <li><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
                     @show
                 </ol>
+                </div>
             </section>
 
             <!-- Main content -->
@@ -90,15 +107,18 @@
 
     <!-- Bootstrap 3.3.7 -->
     <script src="{{ asset('simakkata/plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
     <!-- Moment -->
     <script src="{{ asset('simakkata/plugins/moment/min/moment.min.js') }}"></script>
 
     <!-- DataTables -->
     <script src="{{ asset('simakkata/plugins/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('simakkata/plugins/datatables.net-bs/js/dataTables.bootstrap.min.js') }}">
+    <script src="{{ asset('simakkata/plugins/datatables-bs/js/dataTables.bootstrap.min.js') }}">
     </script>
+
     <!-- AdminLTE App -->
     <script src="{{ asset('simakkata/dist/js/adminlte.min.js') }}"></script>
+
     <!-- Validator -->
     <script src="{{ asset('js/validator.min.js') }}"></script>
 

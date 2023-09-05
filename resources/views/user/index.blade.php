@@ -50,13 +50,14 @@
                 },
                 columns: [{
                         data: 'DT_RowIndex',
+                        class: 'text-center',
                         searchable: false,
                         sortable: false
                     },
                     {data: 'name', name: 'name' , width: '15%', class: 'text-left' },
                     {data: 'nip', name: 'nip' , width: '15%', class: 'text-center' },
                     {data: 'akun', name: 'akun' , width: '15%', class: 'text-center' },
-                    {data: 'email', name: 'email' , width: '15%', class: 'text-left' },
+                    {data: 'email', name: 'email' , width: '15%', class: 'text-center' },
                     {
                         data: 'aksi',
                         searchable: false,

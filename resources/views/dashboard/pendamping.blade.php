@@ -10,6 +10,7 @@
 @endsection
 
 @section('content')
+
     <!-- Small boxes (Stat box) -->
     <div class="row">
         <div class="col-lg-3 col-xs-6">
@@ -77,7 +78,7 @@
     </div>
 <h1 class='text-center'>Roadmap Binaan Akreditasi</h1>
     <div class="row">
-        <div class="col-md-6">
+    <div class="col-md-4">
             <div class="table">
                 <div class="card-header text-center bg-primary"><b>Cluster 1 TPCB</b></div>
                 <div class="card-body">
@@ -131,7 +132,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-header text-center bg-primary"><b>Cluster 2 TPCB</b></div>
                 <div class="table">
@@ -185,7 +186,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-header text-center bg-primary"><b>Cluster 3 TPCB</b></div>
                 <div class="table">

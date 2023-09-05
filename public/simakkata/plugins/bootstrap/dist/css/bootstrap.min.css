@@ -5,9 +5,8 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-    font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
 body {
@@ -224,11 +223,6 @@ optgroup {
 table {
     border-collapse: collapse;
     border-spacing: 0
-}
-
-td,
-th {
-    padding: 0
 }
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
@@ -1389,8 +1383,6 @@ th {
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -1399,11 +1391,6 @@ th {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box
-}
-
-html {
-    font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
 body {
@@ -1749,8 +1736,19 @@ a.text-danger:hover {
 
 .bg-primary {
     color: #fff;
-    background-color: #337ab7
-    
+    background-color: #337ab7;
+    min-height: 40px;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.bg-primary-light {
+    background-color: lightskyblue;
+    min-height: 40px;   
+    border-radius: 25%;
+    vertical-align: middle;
+    padding: 15px;
+    animation: marquee 5s linear infinite;
 }
 
 a.bg-primary:focus,
@@ -2093,8 +2091,8 @@ pre code {
 .col-xs-9 {
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px
+    padding-right: 10px;
+    padding-left: 10px
 }
 
 .col-xs-1,
@@ -3025,7 +3023,6 @@ th {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid #ddd
 }
 
 .table>thead>tr>th {
@@ -3056,11 +3053,11 @@ th {
 .table-condensed>tfoot>tr>th,
 .table-condensed>thead>tr>td,
 .table-condensed>thead>tr>th {
-    padding: 5px
+    padding: 3px
 }
 
 .table-bordered {
-    border: 1px solid #ddd
+    border: 0px solid #ddd
 }
 
 .table-bordered>tbody>tr>td,
@@ -3069,12 +3066,12 @@ th {
 .table-bordered>tfoot>tr>th,
 .table-bordered>thead>tr>td,
 .table-bordered>thead>tr>th {
-    border: 1px solid #ddd
+    border: 0px solid #ddd
 }
 
 .table-bordered>thead>tr>td,
 .table-bordered>thead>tr>th {
-    border-bottom-width: 2px
+    border-bottom-width: 0px
 }
 
 .table-striped>tbody>tr:nth-of-type(odd) {
