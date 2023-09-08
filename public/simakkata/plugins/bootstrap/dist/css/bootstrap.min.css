@@ -158,6 +158,7 @@ html input[type=button],
 input[type=reset],
 input[type=submit] {
     -webkit-appearance: button;
+    appearance: button;
     cursor: pointer
 }
 
@@ -191,6 +192,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=search] {
     -webkit-appearance: textfield;
+    appearance: textfield;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box
@@ -1736,19 +1738,40 @@ a.text-danger:hover {
 
 .bg-primary {
     color: #fff;
-    background-color: #337ab7;
+    background-color: #3c8dbc;
     min-height: 40px;
     vertical-align: middle;
     padding: 15px;
 }
 
+.bg-666 {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #666;
+    color: #fff;
+    min-height: 40px;
+    vertical-align: middle;
+    padding: 15px;    
+    border-radius: 15px;
+}
+
+.bg-888 {
+    color: #fff;
+    background-color: #888;
+    min-height: 40px;
+    vertical-align: middle;
+    padding: 15px;    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
 .bg-primary-light {
-    background-color: lightskyblue;
-    min-height: 40px;   
-    border-radius: 25%;
+    background-color: lightblue;
+    min-height: 40px;
     vertical-align: middle;
     padding: 15px;
-    animation: marquee 5s linear infinite;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 a.bg-primary:focus,
@@ -3021,8 +3044,8 @@ th {
 .table>thead>tr>td,
 .table>thead>tr>th {
     padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
+    line-height: 1.2;
+    vertical-align: middle;
 }
 
 .table>thead>tr>th {
@@ -3036,11 +3059,11 @@ th {
 .table>colgroup+thead>tr:first-child>th,
 .table>thead:first-child>tr:first-child>td,
 .table>thead:first-child>tr:first-child>th {
-    border-top: 0
+    border-top: 1;
 }
 
 .table>tbody+tbody {
-    border-top: 2px solid #ddd
+    border-top: 1px solid #ddd
 }
 
 .table .table {
@@ -3341,7 +3364,7 @@ output {
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #555;
+    color: #444;
     background-color: #fff;
     background-image: none;
     border: 1px solid #ccc;
@@ -7862,7 +7885,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
+    background-color: #000;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     border-radius: 10px

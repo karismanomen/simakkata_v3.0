@@ -34,21 +34,6 @@
     <link rel="stylesheet"
         href="{{ asset('/simakkata/plugins/datatables-bs/css/dataTables.bootstrap.min.css') }}">
 
-    <!-- Morris chart -->
-    <link rel="stylesheet" href="plugins/morris.js/morris.css">
-
-    <!-- jvectormap -->
-    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap.css">
-
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/bootstrap-daterangepicker/daterangepicker.css">
-
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -74,8 +59,7 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1><div class="card-header text-center bg-primary-light"> @yield('title')</div></h1>                   </h1>
-                <br>
+                <h1><div class="card-header text-center bg-primary-light"> @yield('title')</div></h1>
                 <div class="text-right">
                 <ol class="breadcrumb">
                     @section('breadcrumb')

@@ -1,5 +1,8 @@
 @extends('layouts.auth')
 
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('/demo3/src/assets/css/dashlite.min.css') }}">
+
 @section('login')
     <div class="login-box">
 
@@ -56,6 +59,7 @@
                 <p class="text-center"><b>Sistem informasi Mutu Akreditasi <br> Kabupaten Tasikmalaya</b></p>
             </h4>
         </div>
+
         <!-- /.login-box-body -->
     </div>
     <!-- /.login-box -->

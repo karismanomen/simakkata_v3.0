@@ -82,10 +82,9 @@ body {
     }
 }
 .main-footer {
-    background: #fae0e0;
     padding: 15px;
     color: #444;
-    border-top: 1px solid #d2d6de;
+    border-top: 2px;
 }
 .fixed .main-header,
 .fixed .main-sidebar,
@@ -463,6 +462,9 @@ a:focus {
     padding: 10px;
     overflow: hidden;
 }
+.user-panel-box {
+    background: #3c8dbc;
+}
 .user-panel:before,
 .user-panel:after {
     content: "";
@@ -598,6 +600,7 @@ a:focus {
     .sidebar-mini.sidebar-collapse .sidebar-menu li.header {
         display: none !important;
         -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
     .sidebar-mini.sidebar-collapse .main-header .logo {
         width: 50px;
@@ -1599,14 +1602,23 @@ a:focus {
     );
 }
 .small-box {
-    border-radius: 15px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     position: relative;
     display: block;
     margin-bottom: 20px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+
+.color-size{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #666;
+}
+
 .small-box > .inner {
-    padding: 20px;
+    padding: 10px;
 }
 .small-box > .small-box-footer {
     position: relative;
@@ -1616,7 +1628,7 @@ a:focus {
     color: rgba(255, 255, 255, 0.8);
     display: block;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.1);
+    background: transparent;
     text-decoration: none;
 }
 .small-box > .small-box-footer:hover {
@@ -2727,35 +2739,23 @@ a:focus {
     border-radius: 0 !important;
 }
 
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > td,
-.table > tfoot > tr > td {
-    border: 1px solid lightskyblue;
-}
-.table > thead > tr > th {
-    border-bottom: 1px solid #ffffff;
-}
 .table tr td .progress {
     margin-top: 1px;
 }
 .table-bordered {
-    border: 5px solid lightblue;
+    border-bottom: 1px solid silver;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {  
-    border: 0px solid lightskyblue;
+.table-bordered > tfoot > tr > td {    
+    border-top: 1px solid silver;    
+    border-right: 1pt solid silver;
+    border-left: 1pt solid silver;
 }
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
-    border-bottom-width: 1px;
-}
+
 .table.no-border,
 .table.no-border td,
 .table.no-border th {
@@ -3343,9 +3343,9 @@ table.text-center th {
 .register-box-body {
     background: rgb(255, 255, 255);
     padding: 30px;
-    color: #444;
+    color: #555;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid #555;
 }
 .login-box-body .form-control-feedback,
 .register-box-body .form-control-feedback {

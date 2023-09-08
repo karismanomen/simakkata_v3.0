@@ -5,14 +5,13 @@
     <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
-            <div class="pull-left image">
-                <img src="{{ url(auth()->user()->foto ?? '') }}" class="img-circle img-profil" alt="User Image">
-            </div>
-            <div class="pull-left info">
-                <p>{{ auth()->user()->name }}</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online<br></a>
-
-            </div>
+                <div class="pull-left image">
+                    <img src="{{ url(auth()->user()->foto ?? '') }}" class="img-circle img-profil" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>{{ auth()->user()->name }}</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online<br></a>
+                </div>
         </div>
         <br>
 
@@ -78,7 +77,7 @@
                 </li>
                 <li class="header">DOKUMEN</li>
                 <li>
-                    <a href="/vfm/">
+                    <a href="/resource/views/mutupustaka">
                         <i class="fa fa-home"></i> <span>Dokumen</span>
                     </a>
                 </li>
@@ -138,6 +137,12 @@
                 <li>
                     <a href="{{ route('pjmutuklinik2.index') }}">
                         <i class="fa fa-id-card"></i> <span>Pj Mutu Klinik</span>
+                    </a>
+                </li>
+				<li class="header">DOKUMEN</li>
+                <li>
+                    <a href="/resource/views/mutupustaka">
+                        <i class="fa fa-home"></i> <span>Dokumen</span>
                     </a>
                 </li>
             @endif

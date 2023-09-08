@@ -83,7 +83,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/setting', [SettingController::class, 'index'])->name('setting.index');
         Route::get('/setting/first', [SettingController::class, 'show'])->name('setting.show');
-        Route::post('/setting', [SettingController::class, 'update'])->name('setting.update');       
+        Route::post('/setting', [SettingController::class, 'update'])->name('setting.update');
     });
 
     Route::group(['middleware' => 'level:2'], function () {

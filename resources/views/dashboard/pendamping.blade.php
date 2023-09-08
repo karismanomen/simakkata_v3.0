@@ -76,11 +76,13 @@
             </div>
         </div>
     </div>
-<h1 class='text-center'>Roadmap Binaan Akreditasi</h1>
+    <br>
+    <div class="small-box bg-primary text-center">Roadmap Binaan Akreditasi    </div>
+
     <div class="row">
     <div class="col-md-4">
             <div class="table">
-                <div class="card-header text-center bg-primary"><b>Cluster 1 TPCB</b></div>
+                <div class="card-header text-center bg-primary-light"><b>Cluster 1 TPCB</b></div>
                 <div class="card-body">
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -129,12 +131,12 @@
                             <td>Sukaratu</td>
                         </tbody>
                     </table>
-                </div>
+                </div>                
             </div>
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header text-center bg-primary"><b>Cluster 2 TPCB</b></div>
+                <div class="card-header text-center bg-primary-light"><b>Cluster 2 TPCB</b></div>
                 <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -188,7 +190,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header text-center bg-primary"><b>Cluster 3 TPCB</b></div>
+                <div class="card-header text-center bg-primary-light"><b>Cluster 3 TPCB</b></div>
                 <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -242,7 +244,7 @@
         </div>
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header text-center bg-primary"><b>Cluster 4 TPCB</b></div>
+                <div class="card-header text-center bg-primary-light"><b>Cluster 4 TPCB</b></div>
                 <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -296,7 +298,7 @@
         </div>
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header text-center bg-primary"><b>Cluster 5 TPCB</b></div>
+                <div class="card-header text-center bg-primary-light"><b>Cluster 5 TPCB</b></div>
                 <div class="table">
                     <table class="table table-bordered table-hover">
                         <thead>
